@@ -1,0 +1,35 @@
+{
+  "inputs": {
+    "routes_kml": "Jalur Route.kml",
+    "stops_kml": "Perhentian Bus Bus Stop.kml",
+    "stop_times": "transjogja_stop_times_final_v6.csv",
+    "poi_data": "wisata_jogja.csv"
+  },
+  "counts": {
+    "kml_stop_points": 494,
+    "canonical_stops": 273,
+    "routes_in_schedule": 20,
+    "routes_with_kml_shape": 20,
+    "stop_events": 31150,
+    "poi_total": 592,
+    "poi_verified": 592,
+    "poi_with_stop_1km": 204,
+    "poi_candidates_active": 196,
+    "recommendation_scenarios": 4,
+    "recommendation_rows": 45
+  },
+  "kml_routes_missing_shape": [],
+  "kml_routes_extra_not_used": [],
+  "ml_metrics": {
+    "best_params": {
+      "bin_size": 3,
+      "K": 1.0,
+      "min_bin_n": 3
+    },
+    "val_mae_min": 0.11730378890392422,
+    "val_rmse_min": 0.9577730216645365,
+    "segments_total": 29442,
+    "segments_unique": 519,
+    "val_rows_usable": 5912
+  }
+}
