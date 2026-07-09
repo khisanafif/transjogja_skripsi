@@ -15,7 +15,7 @@ export default function RouteDetail({ poi, onClose, onAddToPlanner, onCariRute }
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-end md:items-center justify-center bg-black/50 backdrop-blur-sm animate-fade-in"
+      className="fixed inset-0 z-[9999] flex items-end md:items-center justify-center bg-black/50 backdrop-blur-sm animate-fade-in"
       onClick={e => e.target === e.currentTarget && onClose()}
     >
       <div className="bg-white w-full md:w-[28rem] md:rounded-3xl rounded-t-3xl max-h-[90vh] flex flex-col shadow-2xl overflow-hidden animate-slide-up">

@@ -290,11 +290,18 @@ def get_route_detail(route_dir: str):
     stops_detail = []
     for sid in stops:
         s = S.stops_by_id.get(sid, {})
+        # Ambil daftar rute yang melewati halte ini (kecuali rute yang sedang di-request jika mau)
+        # Tapi lebih baik berikan semuanya, lalu frontend bisa memfilter
+        passing_rds = S.stop_to_route_dirs.get(sid, [])
+        # Ambil unik route_id (contoh: '1A' dari '1A_0')
+        passing_rids = list(dict.fromkeys(r.rsplit("_", 1)[0] for r in passing_rds))
+        
         stops_detail.append({
             "stop_id": sid,
             "stop_name": s.get("name", sid),
             "lat": s.get("lat"),
             "lon": s.get("lon"),
+            "passing_routes": passing_rids,
         })
     return {
         "route_dir": route_dir,

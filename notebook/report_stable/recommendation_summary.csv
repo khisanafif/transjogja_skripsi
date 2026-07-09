@@ -1,5 +1,0 @@
-scenario_id,origin_stop_query,depart_hhmm,day_name,result_rows,best_eta_min,avg_top5_score,all_open_on_arrival,all_have_route_or_walk
-malioboro_umum_sabtu_0900,Malioboro 1,09:00,Sabtu,12,1.884910922972243,0.9017425732320407,1,1
-malioboro_budaya_sabtu_0900,Malioboro 1,09:00,Sabtu,9,15.545978918915633,0.7037352725431896,1,1
-jombor_keluarga_sabtu_0900,Terminal Jombor,09:00,Sabtu,12,13.54646879892707,0.6750508947898406,1,1
-adisutjipto_umum_sabtu_0900,Bandara Adisujtipto,09:00,Sabtu,12,19.4528344768081,0.8396346349495589,1,1

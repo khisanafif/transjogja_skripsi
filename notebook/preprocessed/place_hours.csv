@@ -9,7 +9,6 @@ poi_id,open_hhmm,close_hhmm,open_days,hours_detail,hours_source_type,needs_revie
 126,10:00,17:00,Selasa–Minggu,Senin tutup; Sabtu–Minggu & libnas 08:00–17:00,wisata_jogja_csv,0
 158,09:00,17:00,Setiap hari,Weekday 09:00–17:00; Weekend 08:00–17:00,wisata_jogja_csv,0
 457,07:00,18:00,Setiap hari,The Lost World Castle,wisata_jogja_csv,0
-43,08:00,20:00,Selasa–Minggu,Senin tutup; Jumat–Minggu 08:00–21:00,wisata_jogja_csv,0
 13,08:00,20:00,Selasa–Minggu,Senin tutup; Jumat–Minggu 08:00–21:00,wisata_jogja_csv,0
 121,09:00,17:00,Selasa–Minggu,Senin tutup; Sabtu–Minggu & libnas 08:00–18:00,wisata_jogja_csv,0
 90,00:00,23:59,24 jam,Tugu Yogyakarta - landmark terbuka,wisata_jogja_csv,0
@@ -475,119 +474,8 @@ poi_id,open_hhmm,close_hhmm,open_days,hours_detail,hours_source_type,needs_revie
 110,08:00,17:00,Setiap hari,Terkonfirmasi: 08:00 - 17:00,wisata_jogja_csv,0
 164,08:00,17:00,Setiap hari,Terkonfirmasi: 08:00 - 17:00,wisata_jogja_csv,0
 443,08:00,17:00,Setiap hari,Terkonfirmasi: 08:00 - 17:00,wisata_jogja_csv,0
-511,07:30,21:00,Setiap hari,"Jl. Laksda Adisucipto KM 9, Maguwoharjo, Sleman",wisata_jogja_csv,0
-512,05:30,22:00,Setiap hari,"Jl. Agro No.2 CT3, Kocoran, Caturtunggal, Depok, Sleman",wisata_jogja_csv,0
-513,10:00,00:00,Setiap hari,"Buka hingga tengah malam. Jl. FM Noto No.7, Kotabaru, Gondokusuman",wisata_jogja_csv,0
-514,11:00,22:00,Setiap hari,"Jl. Imogiri Timur KM 10, Jejeran, Pleret, Bantul",wisata_jogja_csv,0
-515,21:30,23:59,Setiap hari,"Buka malam 21:30 WIB hingga habis. Jl. Prof. DR. Soepomo UH/IV No.36, Warungboto",wisata_jogja_csv,0
-516,18:00,23:00,Setiap hari,"Buka sore-malam. Jl. KH. Ahmad Dahlan, Purwodiningratan, Ngampilan",wisata_jogja_csv,0
-517,14:00,03:00,Setiap hari,"Buka siang hingga dini hari 03:00. Jl. Wongsodirjan, Gedong Tengen",wisata_jogja_csv,0
-518,05:00,11:00,Setiap hari,"Buka subuh-siang, sering habis sebelum 11:00. Sosrowijayan, Gedong Tengen",wisata_jogja_csv,0
-519,06:00,16:00,Setiap hari,"Kawasan Pakem, dekat Kaliurang",wisata_jogja_csv,0
-520,08:00,22:00,Setiap hari,"Jl. Magelang KM 11, Niron, Pandowoharjo, Sleman",wisata_jogja_csv,0
-521,07:00,17:00,Setiap hari,"Jl. Pabringan No.1, Ngupasan, Gondomanan. Beberapa pedagang buka lebih malam",wisata_jogja_csv,0
-522,10:00,22:00,Setiap hari,"Jl. Magangan Kulon No.1, Panembahan, Kraton",wisata_jogja_csv,0
-523,10:00,17:00,Setiap hari,"Jl. Imogiri Tim. No.187, Giwangan, Umbulharjo",wisata_jogja_csv,0
-524,09:00,21:00,Setiap hari,"Jl. Sultan Agung No.17, Gunungketur, Pakualaman",wisata_jogja_csv,0
-530,09:00,17:00,Setiap hari,"Jl. Magelang KM 14, Jetis, Caturharjo, Sleman",wisata_jogja_csv,0
-531,08:00,21:00,Setiap hari,"Weekday 08:00–21:00; Weekend 08:00–22:00. Jl. Kaliurang KM 22, Pakem, Sleman",wisata_jogja_csv,0
-532,09:00,17:00,Setiap hari,"Jl. Boyong No.97, Hargobinangun, Pakem, Sleman",wisata_jogja_csv,0
-533,09:00,21:00,Setiap hari,"Jl. Giricahyo, Purwosari, Gunungkidul",wisata_jogja_csv,0
-534,10:00,21:00,Setiap hari,"Weekday 10:00–21:00; Weekend 08:00–21:00. Jl. Dlingo-Patuk, Bantul/Gunungkidul",wisata_jogja_csv,0
-535,08:00,22:00,Setiap hari,"Banjarejo, Tanjungsari, Gunungkidul",wisata_jogja_csv,0
-536,09:00,21:00,Setiap hari,"Bolang, Girikarto, Panggang, Gunungkidul",wisata_jogja_csv,0
-537,09:00,17:00,Setiap hari,"Gamplong 1, Sumber Rahayu, Moyudan, Sleman",wisata_jogja_csv,0
-538,08:00,18:00,Setiap hari,"Jl. Terminal Jungwok, Pendowo, Jepitu, Girisubo, Gunungkidul",wisata_jogja_csv,0
-539,08:30,16:00,Selasa–Minggu,"Senin tutup. Jl. Boyong KM 25, Kaliurang, Hargobinangun, Pakem, Sleman",wisata_jogja_csv,0
 540,07:00,15:00,Setiap hari,"Hanya dengan reservasi. Jl. Dusun Jetis Wetan, Pacarejo, Semanu, Gunungkidul",wisata_jogja_csv,0
 541,06:00,17:00,Setiap hari,"Nglanggeran, Patuk, Gunungkidul",wisata_jogja_csv,0
-542,08:00,17:00,Setiap hari,"Mungguran II, Bleberan, Playen, Gunungkidul",wisata_jogja_csv,0
-543,07:00,17:00,Setiap hari,"Jl. Goa Pindul Gelaran 2, Bejiharjo, Karangmojo, Gunungkidul",wisata_jogja_csv,0
-544,08:00,16:00,Selasa–Minggu,"Senin tutup. Jl. Boyong KM 22, Hargobinangun, Pakem, Sleman",wisata_jogja_csv,0
-545,06:00,23:30,Setiap hari,Terkonfirmasi: 06:00 - 23:30,wisata_jogja_csv,0
-546,08:00,23:00,Setiap hari,Terkonfirmasi: 08:00 - 23:00,wisata_jogja_csv,0
-547,08:00,23:00,Setiap hari,Terkonfirmasi: 08:00 - 23:00,wisata_jogja_csv,0
-548,08:00,21:00,Setiap hari,Terkonfirmasi: 08:00 - 21:00,wisata_jogja_csv,0
-549,08:00,17:00,Selasa–Minggu,Terkonfirmasi: 08:00 - 17:00 (Senin tutup),wisata_jogja_csv,0
 550,06:00,17:30,Setiap hari,Terkonfirmasi: 06:00 - 17:30,wisata_jogja_csv,0
 551,07:00,17:00,Setiap hari,Terkonfirmasi: 07:00 - 17:00,wisata_jogja_csv,0
 552,06:00,18:00,Setiap hari,Terkonfirmasi: 06:00 - 18:00,wisata_jogja_csv,0
-553,08:00,21:00,Setiap hari,Terkonfirmasi: 08:00 - 21:00,wisata_jogja_csv,0
-554,08:00,21:00,Setiap hari,Terkonfirmasi: 08:00 - 21:00,wisata_jogja_csv,0
-555,08:00,21:00,Setiap hari,Terkonfirmasi: 08:00 - 21:00,wisata_jogja_csv,0
-556,08:00,21:00,Setiap hari,Terkonfirmasi: 08:00 - 21:00,wisata_jogja_csv,0
-557,08:00,21:00,Setiap hari,Terkonfirmasi: 08:00 - 21:00,wisata_jogja_csv,0
-558,08:00,21:00,Setiap hari,Terkonfirmasi: 08:00 - 21:00,wisata_jogja_csv,0
-559,08:00,21:00,Setiap hari,Terkonfirmasi: 08:00 - 21:00,wisata_jogja_csv,0
-560,08:00,21:00,Setiap hari,Terkonfirmasi: 08:00 - 21:00,wisata_jogja_csv,0
-561,08:00,21:00,Setiap hari,Terkonfirmasi: 08:00 - 21:00,wisata_jogja_csv,0
-562,08:00,21:00,Setiap hari,Terkonfirmasi: 08:00 - 21:00,wisata_jogja_csv,0
-563,08:00,21:00,Setiap hari,Terkonfirmasi: 08:00 - 21:00,wisata_jogja_csv,0
-564,08:00,21:00,Setiap hari,Terkonfirmasi: 08:00 - 21:00,wisata_jogja_csv,0
-565,08:00,21:00,Setiap hari,Terkonfirmasi: 08:00 - 21:00,wisata_jogja_csv,0
-566,08:00,21:00,Setiap hari,Terkonfirmasi: 08:00 - 21:00,wisata_jogja_csv,0
-567,08:00,21:00,Setiap hari,Terkonfirmasi: 08:00 - 21:00,wisata_jogja_csv,0
-568,08:00,21:00,Setiap hari,Terkonfirmasi: 08:00 - 21:00,wisata_jogja_csv,0
-569,08:00,21:00,Setiap hari,Terkonfirmasi: 08:00 - 21:00,wisata_jogja_csv,0
-570,08:00,21:00,Setiap hari,Terkonfirmasi: 08:00 - 21:00,wisata_jogja_csv,0
-571,08:00,21:00,Setiap hari,Terkonfirmasi: 08:00 - 21:00,wisata_jogja_csv,0
-572,08:00,21:00,Setiap hari,Terkonfirmasi: 08:00 - 21:00,wisata_jogja_csv,0
-573,08:00,21:00,Setiap hari,Terkonfirmasi: 08:00 - 21:00,wisata_jogja_csv,0
-574,08:00,21:00,Setiap hari,Terkonfirmasi: 08:00 - 21:00,wisata_jogja_csv,0
-575,08:00,21:00,Setiap hari,Terkonfirmasi: 08:00 - 21:00,wisata_jogja_csv,0
-576,08:00,21:00,Setiap hari,Terkonfirmasi: 08:00 - 21:00,wisata_jogja_csv,0
-577,08:00,21:00,Setiap hari,Terkonfirmasi: 08:00 - 21:00,wisata_jogja_csv,0
-578,08:00,21:00,Setiap hari,Terkonfirmasi: 08:00 - 21:00,wisata_jogja_csv,0
-579,08:00,16:00,Setiap hari,Terkonfirmasi: 08:00 - 16:00,wisata_jogja_csv,0
-580,08:00,16:00,Setiap hari,Terkonfirmasi: 08:00 - 16:00,wisata_jogja_csv,0
-581,08:00,16:00,Setiap hari,Terkonfirmasi: 08:00 - 16:00,wisata_jogja_csv,0
-582,08:00,16:00,Setiap hari,Terkonfirmasi: 08:00 - 16:00,wisata_jogja_csv,0
-583,08:00,16:00,Setiap hari,Terkonfirmasi: 08:00 - 16:00,wisata_jogja_csv,0
-584,08:00,16:00,Setiap hari,Terkonfirmasi: 08:00 - 16:00,wisata_jogja_csv,0
-585,08:00,16:00,Setiap hari,Terkonfirmasi: 08:00 - 16:00,wisata_jogja_csv,0
-586,08:00,16:00,Setiap hari,Terkonfirmasi: 08:00 - 16:00,wisata_jogja_csv,0
-587,10:00,22:00,Setiap hari,Terkonfirmasi: 10:00 - 22:00,wisata_jogja_csv,0
-588,08:00,16:00,Setiap hari,Terkonfirmasi: 08:00 - 16:00,wisata_jogja_csv,0
-589,08:00,16:00,Setiap hari,Terkonfirmasi: 08:00 - 16:00,wisata_jogja_csv,0
-590,08:00,16:00,Setiap hari,Terkonfirmasi: 08:00 - 16:00,wisata_jogja_csv,0
-591,10:00,22:00,Setiap hari,Terkonfirmasi: 10:00 - 22:00,wisata_jogja_csv,0
-592,10:00,22:00,Setiap hari,Terkonfirmasi: 10:00 - 22:00,wisata_jogja_csv,0
-593,10:00,22:00,Setiap hari,Terkonfirmasi: 10:00 - 22:00,wisata_jogja_csv,0
-594,08:00,17:00,Setiap hari,Terkonfirmasi: 08:00 - 17:00,wisata_jogja_csv,0
-595,08:00,17:00,Setiap hari,Terkonfirmasi: 08:00 - 17:00,wisata_jogja_csv,0
-596,08:00,17:00,Setiap hari,Terkonfirmasi: 08:00 - 17:00,wisata_jogja_csv,0
-597,08:00,17:00,Setiap hari,Terkonfirmasi: 08:00 - 17:00,wisata_jogja_csv,0
-598,08:00,17:00,Setiap hari,Terkonfirmasi: 08:00 - 17:00,wisata_jogja_csv,0
-599,08:00,17:00,Setiap hari,Terkonfirmasi: 08:00 - 17:00,wisata_jogja_csv,0
-600,08:00,17:00,Setiap hari,Terkonfirmasi: 08:00 - 17:00,wisata_jogja_csv,0
-601,08:00,17:00,Setiap hari,Terkonfirmasi: 08:00 - 17:00,wisata_jogja_csv,0
-602,08:00,17:00,Setiap hari,Terkonfirmasi: 08:00 - 17:00,wisata_jogja_csv,0
-603,08:00,17:00,Setiap hari,Terkonfirmasi: 08:00 - 17:00,wisata_jogja_csv,0
-604,08:00,17:00,Setiap hari,Terkonfirmasi: 08:00 - 17:00,wisata_jogja_csv,0
-605,08:00,17:00,Setiap hari,Terkonfirmasi: 08:00 - 17:00,wisata_jogja_csv,0
-606,08:00,17:00,Setiap hari,Terkonfirmasi: 08:00 - 17:00,wisata_jogja_csv,0
-607,08:00,17:00,Setiap hari,Terkonfirmasi: 08:00 - 17:00,wisata_jogja_csv,0
-608,08:00,17:00,Setiap hari,Terkonfirmasi: 08:00 - 17:00,wisata_jogja_csv,0
-609,08:00,17:00,Setiap hari,Terkonfirmasi: 08:00 - 17:00,wisata_jogja_csv,0
-610,08:00,17:00,Setiap hari,Terkonfirmasi: 08:00 - 17:00,wisata_jogja_csv,0
-611,10:00,22:00,Setiap hari,Terkonfirmasi: 10:00 - 22:00,wisata_jogja_csv,0
-612,10:00,22:00,Setiap hari,Terkonfirmasi: 10:00 - 22:00,wisata_jogja_csv,0
-613,08:00,17:00,Setiap hari,Terkonfirmasi: 08:00 - 17:00,wisata_jogja_csv,0
-614,08:00,17:00,Setiap hari,Terkonfirmasi: 08:00 - 17:00,wisata_jogja_csv,0
-615,08:00,17:00,Setiap hari,Terkonfirmasi: 08:00 - 17:00,wisata_jogja_csv,0
-616,07:00,18:00,Setiap hari,Terkonfirmasi: 07:00 - 18:00,wisata_jogja_csv,0
-617,00:00,23:59,Setiap hari,Terkonfirmasi: Buka 24 Jam,wisata_jogja_csv,0
-618,07:00,18:00,Setiap hari,Terkonfirmasi: 07:00 - 18:00,wisata_jogja_csv,0
-619,07:00,18:00,Setiap hari,Terkonfirmasi: 07:00 - 18:00,wisata_jogja_csv,0
-620,07:00,18:00,Setiap hari,Terkonfirmasi: 07:00 - 18:00,wisata_jogja_csv,0
-621,07:00,18:00,Setiap hari,Terkonfirmasi: 07:00 - 18:00,wisata_jogja_csv,0
-622,07:00,18:00,Setiap hari,Terkonfirmasi: 07:00 - 18:00,wisata_jogja_csv,0
-623,07:00,18:00,Setiap hari,Terkonfirmasi: 07:00 - 18:00,wisata_jogja_csv,0
-624,07:00,18:00,Setiap hari,Terkonfirmasi: 07:00 - 18:00,wisata_jogja_csv,0
-625,07:00,18:00,Setiap hari,Terkonfirmasi: 07:00 - 18:00,wisata_jogja_csv,0
-626,07:00,18:00,Setiap hari,Terkonfirmasi: 07:00 - 18:00,wisata_jogja_csv,0
-627,07:00,18:00,Setiap hari,Terkonfirmasi: 07:00 - 18:00,wisata_jogja_csv,0
-628,07:00,18:00,Setiap hari,Terkonfirmasi: 07:00 - 18:00,wisata_jogja_csv,0
-629,07:00,18:00,Setiap hari,Terkonfirmasi: 07:00 - 18:00,wisata_jogja_csv,0
-630,15:00,23:00,Setiap hari,Terkonfirmasi: 15:00 - 23:00,wisata_jogja_csv,0
-631,15:00,23:00,Setiap hari,Terkonfirmasi: 15:00 - 23:00,wisata_jogja_csv,0

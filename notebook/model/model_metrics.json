@@ -1,12 +1,26 @@
 {
+  "model_version": "v1 (winsorize_per_seg + 5fold_cv + route_fallback + capping)",
   "best_params": {
-    "bin_size": 3,
+    "bin_size": 120,
     "K": 1.0,
     "min_bin_n": 3
   },
-  "val_mae_min": 0.11730378890392422,
-  "val_rmse_min": 0.9577730216645365,
+  "cv_rmse_mean": 0.7951211788470742,
+  "cv_rmse_std": 0.16949268521158684,
+  "cv_mae_mean": 0.1168933092658903,
+  "cv_mae_std": 0.0050080443918426275,
+  "val_mae_min": 0.11679543777903048,
+  "val_rmse_min": 0.7787440555191241,
+  "val_mae_all": 0.11679543777903048,
+  "val_rmse_all": 0.7787440555191241,
   "segments_total": 29442,
   "segments_unique": 519,
-  "val_rows_usable": 5912
+  "val_rows_usable": 5912,
+  "val_rows_total": 5912,
+  "val_unseen_segs": 0,
+  "winsorize_params": {
+    "lower_q": 0.05,
+    "upper_q": 0.95,
+    "min_obs": 10
+  }
 }
