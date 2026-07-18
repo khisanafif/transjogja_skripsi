@@ -5,8 +5,8 @@ from __future__ import annotations
 from typing import Any, List, Optional
 import math
 
-from fastapi import APIRouter, HTTPException, Query
-from pydantic import BaseModel, field_validator
+from fastapi import APIRouter, HTTPException, Query, Path
+from pydantic import BaseModel, field_validator, Field
 
 import startup as S
 from engine.geo import nearest_stops, haversine
@@ -29,8 +29,8 @@ def get_stops():
 
 @router.get("/stops/nearest", tags=["Stops"])
 def get_nearest_stops(
-    lat: float = Query(..., description="Latitude pengguna"),
-    lon: float = Query(..., description="Longitude pengguna"),
+    lat: float = Query(..., description="Latitude pengguna", examples=[-7.7797]),
+    lon: float = Query(..., description="Longitude pengguna", examples=[110.3752]),
     limit: int = Query(5, ge=1, le=20),
 ):
     """5 halte terdekat dari koordinat GPS pengguna."""
@@ -38,7 +38,7 @@ def get_nearest_stops(
 
 
 @router.get("/stops/{stop_id}", tags=["Stops"])
-def get_stop(stop_id: str):
+def get_stop(stop_id: str = Path(..., examples=["HT_194"])):
     s = S.stops_by_id.get(stop_id)
     if not s:
         raise HTTPException(404, "Stop not found")
@@ -68,7 +68,7 @@ def get_poi_types():
 
 
 @router.get("/poi/{poi_id}", tags=["POI"])
-def get_poi_detail(poi_id: int):
+def get_poi_detail(poi_id: int = Path(..., examples=[10])):
     p = S.poi_by_id.get(poi_id)
     if not p:
         raise HTTPException(404, "POI not found")
@@ -83,7 +83,7 @@ def get_poi_detail(poi_id: int):
 # ─────────────────────────────────────────────────────────────────────────────
 
 class RecommendRequest(BaseModel):
-    origin_stop_id: str
+    origin_stop_id: str = Field(..., examples=["HT_194"])
     origin_walk_min: float = 0.0
     depart_hhmm: str = "09:00"
     weekday: str = "Sabtu"
@@ -131,9 +131,9 @@ def post_recommend(req: RecommendRequest):
 # ─────────────────────────────────────────────────────────────────────────────
 
 class RouteRequest(BaseModel):
-    origin_stop_id: str
+    origin_stop_id: str = Field(..., examples=["HT_194"])
     origin_walk_min: float = 0.0
-    dest_poi_id: int
+    dest_poi_id: int = Field(..., examples=[10])
     depart_hhmm: str = "09:00"
 
     @field_validator("depart_hhmm")
@@ -186,7 +186,7 @@ def post_route(req: RouteRequest):
 # ─────────────────────────────────────────────────────────────────────────────
 
 class ItineraryRequest(BaseModel):
-    origin_stop_id: str
+    origin_stop_id: str = Field(..., examples=["HT_194"])
     origin_walk_min: float = 0.0
     depart_hhmm: str = "09:00"
     end_hhmm: str = "17:00"
@@ -222,7 +222,7 @@ def post_itinerary(req: ItineraryRequest):
 
 @router.get("/schedule", tags=["Schedule"])
 def get_schedule(
-    stop_id: str = Query(...),
+    stop_id: str = Query(..., examples=["HT_194"]),
     day_type: str = Query("weekday", pattern="^(weekday|weekend)$"),
 ):
     if stop_id not in S.stops_by_id:
@@ -256,7 +256,7 @@ def get_schedule(
 # ─────────────────────────────────────────────────────────────────────────────
 
 @router.get("/routes/geojson", tags=["Routes"])
-def get_routes_geojson(route_id: Optional[str] = None):
+def get_routes_geojson(route_id: Optional[str] = Query(None, examples=["1A"])):
     """GeoJSON jalur rute untuk Leaflet RouteLayer."""
     features = S.routes_geojson.get("features", [])
     if route_id:
@@ -283,7 +283,7 @@ def get_routes_list():
 
 
 @router.get("/routes/{route_dir}", tags=["Routes"])
-def get_route_detail(route_dir: str):
+def get_route_detail(route_dir: str = Path(..., examples=["1A_0"])):
     stops = S.route_to_stop_list.get(route_dir)
     if not stops:
         raise HTTPException(404, "Route tidak ditemukan")
@@ -314,8 +314,8 @@ def get_route_detail(route_dir: str):
 
 @router.get("/routes/between/stops", tags=["Routes"])
 def get_routes_between(
-    from_stop: str = Query(...),
-    to_stop: str = Query(...),
+    from_stop: str = Query(..., examples=["HT_194"]),
+    to_stop: str = Query(..., examples=["HT_001"]),
 ):
     """Temukan rute yang menghubungkan dua halte (direct atau 1 transfer)."""
     direct = []
