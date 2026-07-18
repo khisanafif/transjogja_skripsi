@@ -1,0 +1,74 @@
+[
+  [
+    "# Sistem Rekomendasi Destinasi Wisata Berbasis Trans Jogja\n",
+    "\n",
+    "Notebook ini mengimplementasikan sistem rekomendasi destinasi wisata di Daerah Istimewa\n",
+    "Yogyakarta yang terintegrasi dengan jaringan transportasi publik **Trans Jogja**.\n",
+    "Penelitian disusun mengikuti alur metodologi **CRISP-DM** (*Cross-Industry Standard Process\n",
+    "for Data Mining*) secara berurutan:\n",
+    "\n",
+    "$$\\text{Business Understanding} \\to \\text{Data Understanding} \\to \\text{Data Preparation}\n",
+    "\\to \\text{Modeling} \\to \\text{Evaluation} \\to \\text{Deployment}$$\n",
+    "\n",
+    "## Gambaran Umum\n",
+    "\n",
+    "Sistem ini menjawab kebutuhan wisatawan dengan mengintegrasikan:\n",
+    "- Data Geometri Rute\n",
+    "- Data Halte dan Jadwal Historis (ETA)\n",
+    "- Data Destinasi Wisata dan Jam Operasional\n",
+    "\n",
+    "**Output utama:** rekomendasi destinasi wisata yang dapat dijangkau dari halte asal,\n",
+    "diurutkan berdasarkan ETA kemudahan rute, dan jam operasional.\n"
+  ],
+  [
+    "## Setup & Konfigurasi\n",
+    "Import semua pustaka dan tentukan path parameter.\n"
+  ],
+  [
+    "## 1. Business Understanding & 2. Data Understanding\n",
+    "Memuat seluruh data sumber dan memeriksa kualitas.\n"
+  ],
+  [
+    "### Fungsi Bantu Geospasial\n",
+    "Fungsi ini digunakan untuk membaca data KML halte dan jalur.\n"
+  ],
+  [
+    "### Memuat Data Sumber\n"
+  ],
+  [
+    "## 3. Data Preparation\n",
+    "Mempersiapkan fitur-fitur spasial dan jadwal.\n"
+  ],
+  [
+    "### Fungsi Bantu Jadwal & Waktu\n"
+  ],
+  [
+    "### Fungsi Bantu Modeling ETA\n",
+    "Fungsi ini digunakan untuk membentuk segmen-segmen ETA.\n"
+  ],
+  [
+    "### Fungsi Bantu Pemrosesan POI\n",
+    "Fungsi ini digunakan untuk mencocokkan halte terdekat dan operasional POI.\n"
+  ],
+  [
+    "### Eksekusi Data Preparation\n"
+  ],
+  [
+    "## 4. Modeling\n",
+    "Membangun model Estimasi Waktu Perjalanan (ETA) .\n"
+  ],
+  [
+    "### Pelatihan Model\n"
+  ],
+  [
+    "## 5. Evaluation\n",
+    "Mengevaluasi performa ETA (RMSE/MAE).\n"
+  ],
+  [
+    "## 6. Deployment\n",
+    "Menyediakan API routing dan eksport artefak.\n"
+  ],
+  [
+    "### Eksekusi Export Deployment\n"
+  ]
+]
