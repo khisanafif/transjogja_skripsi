@@ -62,6 +62,110 @@ function FlyTo({ pos }) {
   return null
 }
 
+function distanceSq(lat1, lon1, lat2, lon2) {
+  return (lat1 - lat2) ** 2 + (lon1 - lon2) ** 2;
+}
+
+function findClosestIndex(coords, lat, lon) {
+  let minD = Infinity;
+  let idx = 0;
+  for (let i = 0; i < coords.length; i++) {
+    const c = coords[i];
+    const d = distanceSq(lat, lon, c[1], c[0]);
+    if (d < minD) { minD = d; idx = i; }
+  }
+  return idx;
+}
+
+function getSegmentGeoJSON(selectedPoi, stops, routesGeoJSON) {
+  if (!selectedPoi || !selectedPoi.route_legs || !routesGeoJSON) return null;
+  
+  const busLegs = selectedPoi.route_legs.filter(l => l.type === 'BUS');
+  if (busLegs.length === 0) return null;
+  
+  const features = [];
+  
+  for (const leg of busLegs) {
+    const routeFeature = routesGeoJSON.features.find(f => f.properties.route_id === leg.route_id);
+    if (!routeFeature) continue;
+    
+    const boardStop = stops.find(s => s.stop_id === leg.board_stop_id || s.name === leg.board_stop_name);
+    const alightStop = stops.find(s => s.stop_id === leg.alight_stop_id || s.name === leg.alight_stop_name);
+    
+    if (!boardStop || !alightStop) {
+      features.push(routeFeature);
+      continue;
+    }
+    
+    if (routeFeature.geometry.type === 'LineString') {
+      const coords = routeFeature.geometry.coordinates;
+      const startIdx = findClosestIndex(coords, boardStop.lat, boardStop.lon);
+      const endIdx = findClosestIndex(coords, alightStop.lat, alightStop.lon);
+      
+      let segmentCoords = [];
+      if (startIdx <= endIdx) {
+        segmentCoords = coords.slice(startIdx, endIdx + 1);
+      } else {
+        segmentCoords = [...coords.slice(startIdx), ...coords.slice(0, endIdx + 1)];
+      }
+      
+      features.push({
+        type: 'Feature',
+        properties: routeFeature.properties,
+        geometry: { type: 'LineString', coordinates: segmentCoords }
+      });
+    } else {
+       features.push(routeFeature);
+    }
+  }
+  
+  return {
+    type: 'FeatureCollection',
+    features: features
+  };
+}
+
+function FitRouteBounds({ origin, dest, activeGeoJSON, walkLines }) {
+  const map = useMap()
+  const prevRef = useRef(null)
+  
+  useEffect(() => {
+    if (!origin && !dest && !activeGeoJSON) return
+    
+    // Create a key to avoid refitting continuously if nothing changes
+    const key = `${origin?.lat},${dest?.lat},${activeGeoJSON?.features?.length}`
+    if (key === prevRef.current) return
+    prevRef.current = key
+
+    const bounds = L.latLngBounds([])
+    if (origin?.lat) bounds.extend([origin.lat, origin.lon])
+    if (dest?.lat) bounds.extend([dest.lat, dest.lon])
+    
+    if (activeGeoJSON && activeGeoJSON.features && activeGeoJSON.features.length > 0) {
+      try {
+        const layer = L.geoJSON(activeGeoJSON)
+        if (layer.getBounds().isValid()) {
+          bounds.extend(layer.getBounds())
+        }
+      } catch (e) {
+        console.error("Failed to parse geoJSON bounds", e)
+      }
+    }
+    
+    if (walkLines && walkLines.length > 0) {
+      walkLines.forEach(line => {
+        line.forEach(coord => bounds.extend(coord))
+      })
+    }
+    
+    if (bounds.isValid()) {
+      map.flyToBounds(bounds, { padding: [50, 50], duration: 1.2 })
+    }
+  }, [map, origin, dest, activeGeoJSON, walkLines])
+  
+  return null
+}
+
 export default function MapView({
   stops = [],
   allPois = [],
@@ -81,10 +185,13 @@ export default function MapView({
 
   // Only show stops with valid coords
   // If isolatedStops is provided, ONLY show those stops
-  const validStops = stops.filter(s => s.lat != null && s.lon != null && (!isolatedStops || isolatedStops.includes(s.stop_id)))
+  // If selectedPoi is provided, hide all stops (origin is handled separately)
+  const validStops = selectedPoi ? [] : stops.filter(s => s.lat != null && s.lon != null && (!isolatedStops || isolatedStops.includes(s.stop_id)))
+  
   const poiSource = recommendations.length > 0 ? recommendations : allPois
   // If isolatedRouteId is provided, don't show POIs
-  const validPoi  = isolatedRouteId ? [] : poiSource.filter(p => p.lat != null && p.lon != null)
+  // If selectedPoi is provided, ONLY show the selected POI
+  const validPoi  = isolatedRouteId ? [] : (selectedPoi ? [selectedPoi] : poiSource.filter(p => p.lat != null && p.lon != null))
 
   const activeRouteIds = selectedPoi?.route_legs
     ?.filter(l => l.type === 'BUS')
@@ -93,7 +200,9 @@ export default function MapView({
   if (isolatedRouteId) activeRouteIds.push(isolatedRouteId)
 
   let activeGeoJSON = null
-  if (routesGeoJSON && activeRouteIds.length > 0) {
+  if (routesGeoJSON && selectedPoi?.route_legs) {
+    activeGeoJSON = getSegmentGeoJSON(selectedPoi, stops, routesGeoJSON)
+  } else if (routesGeoJSON && activeRouteIds.length > 0) {
     activeGeoJSON = {
       ...routesGeoJSON,
       features: routesGeoJSON.features.filter(f => activeRouteIds.includes(f.properties.route_id))
@@ -103,9 +212,24 @@ export default function MapView({
   const walkLines = []
   if (selectedPoi?.route_legs) {
     const legs = selectedPoi.route_legs
+    
+    // Add WALK_START line if present
+    const firstLeg = legs[0]
+    if (firstLeg?.type === 'WALK_START') {
+      const toStop = stops.find(s => s.stop_id === firstLeg.to_stop_id || s.name === firstLeg.to_stop_name)
+      if (toStop && toStop.lat) {
+        const startLat = userPos?.[0] || originStop?.lat
+        const startLon = userPos?.[1] || originStop?.lon
+        if (startLat && startLon) {
+          walkLines.push([[startLat, startLon], [toStop.lat, toStop.lon]])
+        }
+      }
+    }
+
+    // Add WALK_END line
     const lastLeg = legs[legs.length - 1]
     if (lastLeg?.type === 'WALK_END') {
-      const fromStop = stops.find(s => s.stop_id === lastLeg.from_stop_id) || stops.find(s => s.name === lastLeg.from_stop_name)
+      const fromStop = stops.find(s => s.stop_id === lastLeg.from_stop_id || s.name === lastLeg.from_stop_name)
       if (fromStop && fromStop.lat) {
         walkLines.push([[fromStop.lat, fromStop.lon], [selectedPoi.lat, selectedPoi.lon]])
       }
@@ -131,17 +255,21 @@ export default function MapView({
         maxZoom={19}
       />
 
-      {flyTarget && <FlyTo pos={flyTarget} />}
+      {selectedPoi ? (
+        <FitRouteBounds origin={originStop} dest={selectedPoi} activeGeoJSON={activeGeoJSON} walkLines={walkLines} />
+      ) : (
+        flyTarget && <FlyTo pos={flyTarget} />
+      )}
 
       {/* Routes (subtle background) */}
-      {routesGeoJSON && !isolatedRouteId && (
+      {routesGeoJSON && !isolatedRouteId && !selectedPoi && (
         <GeoJSON
           key="all-routes"
           data={routesGeoJSON}
           style={(feature) => ({
-            color: selectedPoi ? '#cbd5e1' : getRouteColor(feature.properties.route_id),
-            weight: selectedPoi ? 2 : 3,
-            opacity: selectedPoi ? 0.3 : 0.6,
+            color: getRouteColor(feature.properties.route_id),
+            weight: 3,
+            opacity: 0.6,
             interactive: false
           })}
         />
@@ -150,7 +278,7 @@ export default function MapView({
       {/* Active Route Highlight */}
       {activeGeoJSON && (
         <GeoJSON
-          key={`active-routes-${selectedPoi.poi_id}-${activeRouteIds.join('-')}`}
+          key={`active-routes-${selectedPoi?.poi_id || 'iso'}-${activeRouteIds.join('-')}`}
           data={activeGeoJSON}
           style={(feature) => ({
             color: getRouteColor(feature.properties.route_id),
@@ -170,8 +298,8 @@ export default function MapView({
         />
       ))}
 
-      {/* Stop markers – only when zoomed in enough */}
-      <ZoomedMarkers stops={validStops} onStopClick={onStopClick} />
+      {/* Stop markers – only when zoomed in enough or forced */}
+      <ZoomedMarkers stops={validStops} onStopClick={onStopClick} forceShow={!!isolatedStops} />
 
       {/* User location */}
       {userPos && (
@@ -225,7 +353,7 @@ export default function MapView({
 }
 
 // Separate component so it can call useMap()
-function ZoomedMarkers({ stops, onStopClick }) {
+function ZoomedMarkers({ stops, onStopClick, forceShow }) {
   const map = useMap()
   const [zoom, setZoom] = L.version ? [13, () => {}] : [13, () => {}]
 
@@ -236,9 +364,9 @@ function ZoomedMarkers({ stops, onStopClick }) {
     return () => map.off('zoomend', onZoom)
   }, [map])
 
-  // Only render stops at zoom >= 14 to avoid lag
+  // Only render stops at zoom >= 14 to avoid lag, unless forced
   const currentZoom = map.getZoom?.() ?? 13
-  if (currentZoom < 14) return null
+  if (!forceShow && currentZoom < 14) return null
 
   return stops.slice(0, 400).map(s => (
     <Marker

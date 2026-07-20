@@ -1,11 +1,36 @@
-import { useState, useEffect, Suspense, lazy } from 'react'
+import { useState, useEffect, Suspense, lazy, Component } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { api } from '../services/api'
 import { Spinner, getRouteColor } from '../components/shared'
 
+class ErrorBoundary extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true, error };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error("RoutesMapPage crashed:", error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="p-10 text-red-600 bg-red-100 min-h-screen">
+          <h1 className="text-2xl font-bold mb-4">Aplikasi Crash!</h1>
+          <p className="font-mono text-sm">{this.state.error && this.state.error.toString()}</p>
+          <pre className="mt-4 text-xs bg-red-50 p-4 rounded">{this.state.error?.stack}</pre>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
 const MapView = lazy(() => import('../components/map/MapView'))
 
-export default function RoutesMapPage() {
+function RoutesMapPage() {
   const nav = useNavigate()
   
   const [allStops, setAllStops] = useState([])
@@ -114,10 +139,10 @@ export default function RoutesMapPage() {
         </div>
       </header>
       
-      <div className="flex-1 flex overflow-hidden">
+      <div className="flex-1 flex flex-col-reverse md:flex-row overflow-hidden">
         {/* Sidebar */}
         {sidebarOpen && (
-          <div className="w-80 xl:w-96 flex-shrink-0 flex flex-col bg-white border-r border-slate-100 overflow-hidden shadow-sm z-20">
+          <div className="w-full h-1/2 md:h-auto md:w-80 xl:w-96 flex-shrink-0 flex flex-col bg-white border-r border-slate-100 overflow-hidden shadow-sm z-20">
             <div className="p-4 border-b border-slate-100 bg-slate-50">
               <h2 className="text-sm font-bold text-slate-800">Daftar Rute</h2>
               <p className="text-xs text-slate-500 mt-1">Pilih rute untuk melihat jalur dan halte.</p>
@@ -244,5 +269,13 @@ export default function RoutesMapPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function RoutesMapPageWrapper() {
+  return (
+    <ErrorBoundary>
+      <RoutesMapPage />
+    </ErrorBoundary>
   )
 }
