@@ -15,12 +15,20 @@ from pathlib import Path
 
 DATA = Path(__file__).parent / "data"
 
+# ==============================================================================
+# STRUKTUR DATA UTAMA (RAW DATA)
+# Menampung data mentah halte, rute, dan POI dari file JSON.
+# ==============================================================================
 # ── raw data ──────────────────────────────────────────────────────────────────
 stops_list: list[dict] = []
 poi_list:   list[dict] = []       # [v4] hanya needs_review=0
 poi_list_all: list[dict] = []     # semua POI termasuk needs_review=1 (audit)
 routes_geojson: dict   = {}
 
+# ==============================================================================
+# TABEL PENCARIAN (LOOKUP DICTS)
+# Struktur data map/dictionary untuk pencarian rute, estimasi waktu (ETA), dan jadwal dengan cepat (O(1)).
+# ==============================================================================
 # ── lookup dicts ──────────────────────────────────────────────────────────────
 stops_by_id: dict[str, dict] = {}
 poi_by_id:   dict[int, dict] = {}

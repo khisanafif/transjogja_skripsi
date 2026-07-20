@@ -10,6 +10,10 @@ from fastapi.staticfiles import StaticFiles
 import startup
 from routers.all import router
 
+# ==============================================================================
+# KONFIGURASI CORS & ORIGIN
+# Mengatur domain mana saja yang diizinkan untuk mengakses API ini.
+# ==============================================================================
 # ── origins dari env (production: set ALLOWED_ORIGINS) ───────────────────────
 ORIGINS = os.getenv("ALLOWED_ORIGINS", "*").split(",")
 
@@ -29,6 +33,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# ==============================================================================
+# PENANGANAN ERROR GLOBAL
+# Menangani error yang tidak terduga dan mengembalikan respons JSON.
+# ==============================================================================
 # ── global exception handler ──────────────────────────────────────────────────
 @app.exception_handler(Exception)
 async def global_exc(request: Request, exc: Exception):

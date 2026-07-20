@@ -137,6 +137,11 @@ def plan_day(
 
 
 
+# ==============================================================================
+# ALGORITMA PLANNER UTAMA
+# Fungsi ini mencari kemungkinan rute terbaik dengan mempertimbangkan batas jam kerja,
+# durasi setiap tempat, dan logik pindah halte dengan iterasi berbasis antrean.
+# ==============================================================================
 def custom_plan(
     origin_stop_id: str,
     origin_walk_min: float,
