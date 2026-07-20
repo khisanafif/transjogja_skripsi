@@ -204,7 +204,7 @@ def _enrich_legs(legs: list, stops_by_id: dict) -> list:
                     "at_stop_id", "from_stop_id", "to_stop_id"):
             sid = l.get(key)
             if sid and sid in stops_by_id:
-                l[key.replace("_id", "_name")] = stops_by_id[sid].get("name", sid)
+                l[key.replace("_id", "_name")] = stops_by_id[sid].get("stop_name", stops_by_id[sid].get("name", sid))
         result.append(l)
     return result
 

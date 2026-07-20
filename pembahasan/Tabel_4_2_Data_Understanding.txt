@@ -1,0 +1,30 @@
+TABEL KEBUTUHAN SISTEM - BAB 4.2 DATA UNDERSTANDING
+
+Tabel 4.2.1 Statistik Dataset Trans Jogja & POI
+| Keterangan | Jumlah Record |
+|------------|---------------|
+| Total Halte Mentah (KML/GTFS) | 494 |
+| Total Halte Unik (Canonical) | 273 |
+| Total Rute / Trayek | 20 |
+| Total Record Waktu Singgah (Stop Events) | 31.150 |
+| Total Segmen Unik (Antar Halte) | 519 |
+| Total Destinasi Wisata Mentah | 592 |
+| Total Destinasi Wisata Aktif (Jarak < 1km dari halte) | 196 |
+
+Tabel 4.2.2 Hasil Pengecekan Missing Value
+| Nama Kolom / Fitur | Presentase Missing Value | Keterangan Penanganan |
+|--------------------|--------------------------|-----------------------|
+| POI: rating | 1.5% | Diisi menggunakan rata-rata rating (Imputation). |
+| POI: vote_count | 1.5% | Diisi dengan nilai 0 (Cold Start). |
+| Route: Polyline Geometri | 0% | Bersih, ditarik dari file GeoJSON. |
+| Stop_times: arrival_time | 2.1% | Dihapus karena record waktu tidak logis/tidak valid. |
+
+Tabel 4.2.3 Deskripsi Atribut Dataset Final (Setelah Integrasi)
+| Fitur / Kolom | Tipe Data | Deskripsi |
+|---------------|-----------|-----------|
+| stop_id | String | Identitas unik halte bus. |
+| route_dir | String | Identitas arah trayek (contoh: 1A_forward). |
+| lat / lon | Float | Koordinat spasial latitude dan longitude. |
+| seg_median_min| Float | Median waktu tempuh historis antar dua halte berdekatan (menit). |
+| wait_time_min | Float | Rata-rata waktu tunggu kedatangan bus pada jam tertentu. |
+| skor_akhir | Float | Akumulasi bobot kriteria untuk ranking sistem rekomendasi. |

@@ -1,0 +1,28 @@
+TABEL KEBUTUHAN SISTEM - BAB 4.3 DATA PREPARATION
+
+Tabel 4.3.1 Data Sebelum dan Sesudah Normalisasi
+| Karakteristik | Sebelum Normalisasi | Sesudah Normalisasi |
+|---------------|---------------------|---------------------|
+| Missing Values| Ada (Pada atribut arrival_time, rating) | Bersih (Terimputasi/Dihapus) |
+| Tipe Koordinat| String / Variabel Text | Float Presisi 6 desimal |
+| Format Waktu | Beragam (Format teks) | Standar HH:MM:SS / Integer Menit |
+| Jumlah Baris Data Waktu | > 35.000 Baris (Berisi Outlier) | 31.150 Baris Data Valid |
+
+Tabel 4.3.2 Dataset Hasil Integrasi (Fitur Geografis & Historis)
+| Nama Artefak JSON | Deskripsi Singkat & Kegunaan |
+|-------------------|------------------------------|
+| stops.json | Memuat 273 halte valid beserta koordinat bersih (lat/lon). |
+| poi_slim.json | Memuat 196 destinasi aktif lengkap dengan atribut rating/vote. |
+| route_sequences.json| Daftar berurut stop_id yang membentuk 20 trayek polyline. |
+| eta_lookup.json | Tabel Look-up berisi 519 pasang segmen unik beserta waktu tempuh median. |
+| wait_time.json | Waktu tunggu kedatangan historis spesifik per halte dan per jam. |
+
+Tabel 4.3.3 Dataset Final yang Diumpankan ke Model
+| Fitur / Variabel Independen | Tipe Data Asli | Tipe Data Model (Backend) |
+|-----------------------------|----------------|---------------------------|
+| stop_id_origin | string | Node Graph (String) |
+| stop_id_dest | string | Node Graph (String) |
+| depart_hour | integer | Key Dictionary (Int) |
+| route_dir | string | Label Jalur (String) |
+| seg_eta | float | Edge Weight Graph (Float) |
+| poi_rating | float | Parameter Ranking (Float) |

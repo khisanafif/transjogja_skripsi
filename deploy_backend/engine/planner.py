@@ -134,3 +134,118 @@ def plan_day(
         "return_hhmm": min_to_hhmm(current_min),
         "itinerary": itinerary,
     }
+
+
+
+def custom_plan(
+    origin_stop_id: str,
+    origin_walk_min: float,
+    depart_hhmm: str,
+    targets: list[dict],
+    optimize_order: bool = True
+) -> dict:
+    from .eta import hhmm_to_min, min_to_hhmm
+    from .routing import sssp_from_origin, build_route_to_poi
+    from .recommender import _enrich_legs
+    from startup import (
+        poi_by_id, stops_by_id,
+        route_to_stop_list, route_stop_pos, stop_to_route_dirs,
+        eta_exact, route_avg_eta, wait_lookup
+    )
+
+    depart_min = hhmm_to_min(depart_hhmm)
+    current_stop = origin_stop_id
+    current_walk = origin_walk_min
+    current_min = depart_min
+    
+    itinerary = []
+    unvisited = list(targets)
+
+    while unvisited:
+        depart_hour = int(min_to_hhmm(current_min).split(':')[0])
+        
+        dist, pred = sssp_from_origin(
+            origin_stop_id=current_stop,
+            origin_walk_min=current_walk,
+            depart_hour=depart_hour,
+            route_to_stop_list=route_to_stop_list,
+            route_stop_pos=route_stop_pos,
+            stop_to_route_dirs=stop_to_route_dirs,
+            eta_exact=eta_exact,
+            route_avg_eta=route_avg_eta,
+            wait_lookup=wait_lookup,
+        )
+
+        best_idx = -1
+        best_route = None
+        best_eta = float('inf')
+
+        for i, target in enumerate(unvisited):
+            poi = poi_by_id.get(int(target['poi_id']))
+            if not poi:
+                continue
+            
+            route_res = build_route_to_poi(dist, pred, poi)
+            if not route_res:
+                continue
+
+            if optimize_order:
+                if route_res['eta_total_min'] < best_eta:
+                    best_eta = route_res['eta_total_min']
+                    best_route = route_res
+                    best_idx = i
+            else:
+                if i == 0:
+                    best_route = route_res
+                    best_idx = 0
+                break
+        
+        if best_idx == -1 or not best_route:
+            break
+
+        target = unvisited[best_idx]
+        poi = poi_by_id[int(target['poi_id'])]
+        arrive_min = current_min + best_route['eta_total_min']
+        depart_from_poi = arrive_min + target['stay_min']
+
+        itinerary.append({
+            'order': len(itinerary) + 1,
+            'poi_id': poi['poi_id'],
+            'name': poi['name'],
+            'type': poi.get('type'),
+            'lat': poi.get('lat'),
+            'lon': poi.get('lon'),
+            'rating': poi.get('rating'),
+            'open_hhmm': poi.get('open_hhmm'),
+            'close_hhmm': poi.get('close_hhmm'),
+            'needs_review': bool(int(poi.get('needs_review', 0))),
+            'arrive_hhmm': min_to_hhmm(arrive_min),
+            'depart_hhmm': min_to_hhmm(depart_from_poi),
+            'stay_min': target['stay_min'],
+            'eta_from_prev_min': round(best_route['eta_total_min'], 2),
+            'transfers': best_route['transfers'],
+            'route_legs': _enrich_legs(best_route['route_legs'], stops_by_id),
+            'description': poi.get('description'),
+            'htm_weekday': poi.get('htm_weekday'),
+            'htm_weekend': poi.get('htm_weekend'),
+            'image': poi.get('image'),
+        })
+
+        current_stop = poi.get('nearest_stop_id', current_stop)
+        current_walk = float(poi.get('walk_time_min', 0))
+        current_min = depart_from_poi
+        
+        unvisited.pop(best_idx)
+
+    total_travel = sum(i['eta_from_prev_min'] for i in itinerary)
+    total_visit = sum(i['stay_min'] for i in itinerary)
+
+    return {
+        'feasible': len(itinerary) == len(targets),
+        'total_destinations': len(itinerary),
+        'total_travel_min': round(total_travel, 1),
+        'total_visit_min': total_visit,
+        'return_hhmm': min_to_hhmm(current_min),
+        'itinerary': itinerary,
+    }
+

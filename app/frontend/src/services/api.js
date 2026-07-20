@@ -24,6 +24,7 @@ export const api = {
   recommend:        (body)      => req('POST', '/recommend', body),
   routeTo:          (body)      => req('POST', '/route', body),
   itinerary:        (body)      => req('POST', '/itinerary', body),
+  customItinerary:  (body)      => req('POST', '/custom_itinerary', body),
   getSchedule:      (stop_id, day_type) => req('GET', `/schedule?stop_id=${stop_id}&day_type=${day_type||'weekday'}`).then(data => ({
     stop_name: data.stop_name,
     routes: data.routes

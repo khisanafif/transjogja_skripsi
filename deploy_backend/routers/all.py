@@ -371,3 +371,28 @@ def get_routes_between(
         "direct": direct[:5],
         "one_transfer": one_transfer[:5],
     }
+
+
+
+class CustomItineraryRequest(BaseModel):
+    origin_stop_id: str = Field(..., example='HT_194')
+    origin_walk_min: float = 0.0
+    depart_hhmm: str = '09:00'
+    targets: list[dict] = []
+    optimize_order: bool = True
+
+@router.post('/custom_itinerary', tags=['Itinerary'])
+def post_custom_itinerary(req: CustomItineraryRequest):
+    if req.origin_stop_id not in S.stops_by_id:
+        raise HTTPException(400, 'origin_stop_id tidak ditemukan')
+    
+    from engine.planner import custom_plan
+    result = custom_plan(
+        origin_stop_id=req.origin_stop_id,
+        origin_walk_min=req.origin_walk_min,
+        depart_hhmm=req.depart_hhmm,
+        targets=req.targets,
+        optimize_order=req.optimize_order,
+    )
+    return result
+
