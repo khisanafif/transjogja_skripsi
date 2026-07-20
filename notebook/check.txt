@@ -1,0 +1,622 @@
+CELL 2:
+from __future__ import annotations
+import json, math, re, unicodedata
+from difflib import SequenceMatcher
+from pathlib import Path
+from xml.etree import ElementTree as ET
+import numpy as np
+import pandas as pd
+
+BASE_DIR = Path.cwd()
+RAW_DIR = BASE_DIR / "raw"
+PRE_DIR = BASE_DIR / "preprocessed"
+MODEL_DIR = BASE_DIR / "model"
+REPORT_DIR = BASE_DIR / "report"
+WEB_DIR = BASE_DIR / "web_artifacts"
+for p in [PRE_DIR, MODEL_DIR, REPORT_DIR, WEB_DIR]:
+    p.mkdir(parents=True, exist_ok=True)
+
+ROUTES_KML = RAW_DIR / "Jalur Route.kml"
+STOPS_KML = RAW_DIR / "Perhentian Bus Bus Stop.kml"
+STOP_TIMES_CSV = RAW_DIR / "transjogja_stop_times_final_v6.csv"
+POI_CSV = RAW_DIR / "wisata_jogja.csv"
+KML_NS = {"kml": "http://www.opengis.net/kml/2.2"}
+
+WALK_SPEED_M_PER_MIN = 80.0
+POI_WALK_THRESHOLD_M = 1200.0
+TRANSFER_PENALTY_MIN = 5.0
+MIN_STAY_MIN_DEFAULT = 120.0
+RECOMMENDER_DEFAULT_TYPES = [
+    "Budaya dan Sejarah",
+    "Alam",
+    "Agrowisata",
+    "Buatan",
+    "Pantai",
+    "Wisata Air",
+    "Museum",
+    "Desa Wisata",
+    "Pusat Oleh-Oleh",
+]
+RECOMMENDER_EXCLUDE_PATTERNS = [
+    r"\bmeeting point\b",
+    r"\binformation center\b",
+    r"\btour planner\b",
+    r"\btransport service\b",
+    r"\btravel\b",
+    r"\bport\b",
+    r"\bhotel\b",
+    r"\bguest ?house\b",
+    r"\bhomestay\b",
+    r"\bresort\b",
+    r"\bapartment\b",
+    r"\bhostel\b",
+    r"\brental\b",
+    r"\bticket\b",
+    r"\boffice\b",
+    r"\btattoo\b",
+    r"\bguide\b",
+    r"\bchauffeur\b",
+    r"\bruang perawatan\b",
+]
+DAY_NAMES_ID = ["Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu"]
+
+pd.set_option("display.max_columns", 50)
+pd.set_option("display.max_rows", 20)
+print(f"Direktori kerja : {BASE_DIR}")
+CELL 5:
+def parse_route_id(name):
+    """
+    Mengurai dan membersihkan ID rute dari string mentah KML.
+    """
+    name = (name or "").strip()
+    m = re.match(r"^\s*([A-Za-z0-9-]+)", name)
+    return m.group(1).upper() if m else name.upper()
+
+
+def parse_kml_coord_text(text):
+    """
+    Mengekstrak list koordinat (longitude, latitude) dari format string teks KML.
+    """
+    coords = []
+    if not text:
+        return coords
+    for token in text.strip().split():
+        parts = token.split(",")
+        if len(parts) < 2:
+            continue
+        coords.append([float(parts[0]), float(parts[1])])
+    return coords
+
+
+def extract_route_refs(desc):
+    """
+    Mengekstrak referensi rute Trans Jogja yang ada dalam deskripsi KML.
+    """
+    found = re.findall(r"([A-Za-z0-9-]+)\s*_+\s*Trans Jogja", desc or "", flags=re.I)
+    refs, seen = [], set()
+    for item in found:
+        rid = item.upper()
+        if rid not in seen:
+            refs.append(rid)
+            seen.add(rid)
+    return refs
+
+
+def parse_routes_kml(path):
+    """
+    Membaca file KML rute dan mengekstrak properti geometri (LineString).
+    """
+    root = ET.parse(path).getroot()
+    rows, features = [], []
+    for pm in root.findall(".//kml:Placemark", KML_NS):
+        line = pm.find("kml:LineString", KML_NS)
+        if line is None:
+            continue
+        name = (pm.findtext("kml:name", default="", namespaces=KML_NS) or "").strip()
+        desc = (
+            pm.findtext("kml:description", default="", namespaces=KML_NS) or ""
+        ).strip()
+        coords = parse_kml_coord_text(
+            line.findtext("kml:coordinates", default="", namespaces=KML_NS)
+        )
+        route_id = parse_route_id(name)
+        desc_clean = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", desc))[:200]
+        rows.append(
+            {
+                "route_id": route_id,
+                "kml_name": name,
+                "n_vertices": len(coords),
+                "description_preview": desc_clean,
+            }
+        )
+        features.append(
+            {
+                "type": "Feature",
+                "properties": {"route_id": route_id, "kml_name": name},
+                "geometry": {"type": "LineString", "coordinates": coords},
+            }
+        )
+    return pd.DataFrame(rows), {"type": "FeatureCollection", "features": features}
+
+
+def parse_stops_kml(path):
+    """
+    Membaca file KML perhentian/halte dan mengekstrak koordinat (Point).
+    """
+    root = ET.parse(path).getroot()
+    rows = []
+    for pm in root.findall(".//kml:Placemark", KML_NS):
+        point = pm.find("kml:Point", KML_NS)
+        if point is None:
+            continue
+        name = (pm.findtext("kml:name", default="", namespaces=KML_NS) or "").strip()
+        desc = (
+            pm.findtext("kml:description", default="", namespaces=KML_NS) or ""
+        ).strip()
+        coords = parse_kml_coord_text(
+            point.findtext("kml:coordinates", default="", namespaces=KML_NS)
+        )
+        lon = coords[0][0] if coords else np.nan
+        lat = coords[0][1] if coords else np.nan
+        rows.append(
+            {
+                "kml_stop_name": name,
+                "lat": lat,
+                "lon": lon,
+                "route_refs": "|".join(extract_route_refs(desc)),
+                "description_preview": re.sub(
+                    r"\s+", " ", re.sub(r"<[^>]+>", " ", desc)
+                )[:200],
+            }
+        )
+    return pd.DataFrame(rows)
+
+
+def canonicalize_stops():
+    """
+    Menghasilkan ID dan nama halte kanonikal dengan mencocokkan data KML dan CSV.
+    """
+    kml_stops = parse_stops_kml(STOPS_KML)
+    try:
+        st_raw = pd.read_csv(STOP_TIMES_CSV)
+        unique_stop_ids = st_raw["stop_id"].astype(str).unique()
+    except Exception:
+        unique_stop_ids = []
+    if len(unique_stop_ids) == 0:
+        stops = kml_stops.rename(columns={"kml_stop_name": "stop_name"})
+        stops["stop_id"] = stops["stop_name"]
+        stops["source_rows"] = 1
+        return stops[["stop_id", "stop_name", "lat", "lon", "source_rows"]]
+    rows = []
+    for sid in unique_stop_ids:
+        sid_norm = re.sub(
+            r"[^a-z0-9]",
+            "",
+            sid.lower()
+            .replace("tpb", "")
+            .replace("halte", "")
+            .replace("s_", "")
+            .replace("terminal", "term"),
+        )
+        best_match, best_score = None, -1
+        for _, krow in kml_stops.iterrows():
+            kname = str(krow["kml_stop_name"])
+            knorm = re.sub(
+                r"[^a-z0-9]",
+                "",
+                kname.lower()
+                .replace("tpb", "")
+                .replace("halte", "")
+                .replace(" - a", "")
+                .replace(" - b", ""),
+            )
+            score = SequenceMatcher(None, sid_norm, knorm).ratio()
+            if knorm and sid_norm and (knorm in sid_norm or sid_norm in knorm):
+                score += 0.5
+            if score > best_score:
+                best_score = score
+                best_match = krow
+        if best_match is not None and best_score > 0.4:
+            rows.append(
+                {
+                    "stop_id": sid,
+                    "stop_name": best_match["kml_stop_name"],
+                    "lat": best_match["lat"],
+                    "lon": best_match["lon"],
+                    "source_rows": 1,
+                }
+            )
+        else:
+            rows.append(
+                {
+                    "stop_id": sid,
+                    "stop_name": sid.replace("S_", "").replace("_", " ").title(),
+                    "lat": np.nan,
+                    "lon": np.nan,
+                    "source_rows": 1,
+                }
+            )
+    return pd.DataFrame(rows)
+
+
+def haversine_m(lat1, lon1, lat2, lon2):
+    """
+    Menghitung jarak bumi menggunakan formula Haversine.
+    Menerima input tunggal maupun array (vektorisasi).
+    """
+    lat1, lon1, lat2, lon2 = map(np.radians, [lat1, lon1, lat2, lon2])
+    dlat = lat2 - lat1
+    dlon = lon2 - lon1
+    a = np.sin(dlat / 2) ** 2 + np.cos(lat1) * np.cos(lat2) * np.sin(dlon / 2) ** 2
+    return 6_371_000.0 * 2 * np.arcsin(np.sqrt(a))
+CELL 7:
+route_summary, route_fc_all = parse_routes_kml(ROUTES_KML)
+kml_stop_points = parse_stops_kml(STOPS_KML)
+stops = canonicalize_stops()
+stops = stops.sort_values(["stop_name", "stop_id"]).reset_index(drop=True)
+canonical_id_map = {
+    raw_id: f"HT_{i+1:03d}" for i, raw_id in enumerate(stops["stop_id"])
+}
+stops["stop_id"] = stops["stop_id"].map(canonical_id_map)
+
+stop_times_raw = pd.read_csv(STOP_TIMES_CSV)
+stop_times_raw["route_id"] = stop_times_raw["route_id"].astype(str).str.upper()
+stop_times_raw["trip_id"] = stop_times_raw["trip_id"].astype(str)
+stop_times_raw["stop_id"] = stop_times_raw["stop_id"].astype(str)
+stop_times_raw["stop_id"] = (
+    stop_times_raw["stop_id"].map(canonical_id_map).fillna(stop_times_raw["stop_id"])
+)
+valid_routes = set(route_summary["route_id"].astype(str).str.upper())
+stop_times_raw = stop_times_raw[stop_times_raw["route_id"].isin(valid_routes)].copy()
+
+poi = pd.read_csv(POI_CSV)
+if "no" in poi.columns:
+    poi = poi.rename(columns={"no": "poi_id"})
+else:
+    poi["poi_id"] = np.arange(len(poi), dtype=int)
+
+print("Ringkasan Dataset:")
+display(
+    pd.DataFrame(
+        [
+            {"dataset": "Rute Trans Jogja (KML)", "baris": len(route_summary)},
+            {"dataset": "Halte Kanonikal", "baris": stops["stop_id"].nunique()},
+            {"dataset": "Jadwal Keberangkatan", "baris": len(stop_times_raw)},
+            {"dataset": "Destinasi Wisata (POI)", "baris": len(poi)},
+        ]
+    )
+)
+CELL 16:
+stop_times = normalize_trip_times(stop_times_raw)
+stop_events = build_stop_events(stop_times)
+segments = build_segments(stop_times, stops)
+wait_lookup = build_wait_lookup(stop_events)
+
+place_hours = poi[["poi_id"]].copy()
+place_hours["open_hhmm"] = poi["jam_buka"]
+place_hours["close_hhmm"] = poi["jam_tutup"]
+place_hours["open_days"] = poi["hari_operasional"]
+place_hours["hours_detail"] = poi.get("catatan_jam", "")
+place_hours["hours_source_type"] = "wisata_jogja_csv"
+place_hours["needs_review"] = 0
+
+poi_nearest = nearest_stop_for_pois(poi, stops)
+
+# [BARU] Winsorizing per-segmen
+segments_w = winsorize_segments_per_segment(
+    segments, lower_q=0.05, upper_q=0.95, min_obs=10
+)
+
+print(f"\nPerbandingan distribusi sebelum vs sesudah winsorizing:")
+print(
+    f'  Mean  : {segments["travel_time_min"].mean():.3f} → {segments_w["travel_time_min_w"].mean():.3f} menit'
+)
+print(
+    f'  Median: {segments["travel_time_min"].median():.3f} → {segments_w["travel_time_min_w"].median():.3f} menit'
+)
+print(
+    f'  Std   : {segments["travel_time_min"].std():.3f} → {segments_w["travel_time_min_w"].std():.3f} menit'
+)
+CELL 17:
+route_sequences, route_sequence_summary = build_route_sequences(stop_times, stops)
+print(f"Route sequences: {len(route_sequence_summary)} koridor-arah")
+display(route_sequence_summary.head(8))
+
+poi_catalog = (
+    poi.rename(
+        columns={
+            "nama": "name",
+            "vote_average": "rating",
+            "vote_count": "vote_count",
+            "latitude": "lat",
+            "longitude": "lon",
+        }
+    )[["poi_id", "name", "type", "rating", "vote_count", "lat", "lon", "description"]]
+    .merge(place_hours, on="poi_id", how="left")
+    .merge(poi_nearest, on="poi_id", how="left")
+)
+poi_catalog = build_destination_candidate_flags(poi_catalog)
+poi_nearest_final = nearest_stop_for_pois(poi, stops)
+poi_catalog = poi_catalog.drop(
+    columns=[
+        c
+        for c in [
+            "nearest_stop_id",
+            "nearest_stop_name",
+            "stop_lat",
+            "stop_lon",
+            "walk_dist_m",
+            "walk_time_min",
+        ]
+        if c in poi_catalog.columns
+    ]
+).merge(poi_nearest_final, on="poi_id", how="left")
+poi_catalog = build_destination_candidate_flags(poi_catalog)
+poi_catalog_verified = poi_catalog.copy()
+n_candidates = int((poi_catalog_verified["is_destination_candidate"] == 1).sum())
+print(
+    f"Pool Rekomendasi: {n_candidates} kandidat aktif dari {len(poi_catalog)} total POI"
+)
+CELL 20:
+train_seg, val_seg = split_train_val_segments(segments_w)
+print(
+    f'Data segmen  : {len(segments_w):,} baris ({segments_w["segment_id"].nunique():,} unik)'
+)
+print(f"  Latih      : {len(train_seg):,} ({len(train_seg)/len(segments_w)*100:.0f}%)")
+print(f"  Validasi   : {len(val_seg):,} ({len(val_seg)/len(segments_w)*100:.0f}%)")
+
+print("\nMemulai grid search 5-Fold CV...")
+print("Dioptimasi untuk RMSE (bukan hanya MAE)")
+print("Filter: hanya segmen yang ada di training yang dievaluasi")
+grid_res_cv, best_cv = grid_search_cv(
+    segments_w, n_folds=5, value_col="travel_time_min_w"
+)
+
+best_bin = int(best_cv["bin_size"])
+best_K = float(best_cv["K"])
+best_min_n = int(best_cv["min_bin_n"])
+
+print(f"\nParameter terpilih (5-Fold CV, optimasi RMSE):")
+print(f"  bin_size      = {best_bin} menit")
+print(f"  K             = {best_K}")
+print(f"  min_bin_n     = {best_min_n}")
+print(f'  CV RMSE mean  = {best_cv["cv_rmse_mean"]:.4f} menit')
+print(f'  CV RMSE std   = {best_cv["cv_rmse_std"]:.4f} menit')
+print(f'  CV MAE mean   = {best_cv["cv_mae_mean"]:.4f} menit')
+print(f"\nTop 10 kombinasi parameter terbaik (CV, sort by RMSE):")
+display(grid_res_cv.head(10))
+CELL 21:
+# Lookup berbasis train saja (untuk evaluasi hold-out)
+base_lookup_train, bin_lookup_train = build_segment_lookup(
+    train_seg,
+    bin_size=best_bin,
+    K=best_K,
+    min_bin_n=best_min_n,
+    value_col="travel_time_min_w",
+)
+
+# Lookup final berbasis seluruh data (untuk deployment)
+base_lookup, bin_lookup = build_segment_lookup(
+    segments_w,
+    bin_size=best_bin,
+    K=best_K,
+    min_bin_n=best_min_n,
+    value_col="travel_time_min_w",
+)
+print(
+    f"Lookup ETA final: {len(base_lookup)} segmen, {len(bin_lookup)} time-bin entries"
+)
+CELL 22:
+base_map, bin_map = build_segment_prediction_maps(base_lookup, bin_lookup)
+route_to_stop_list, route_stop_pos, stop_to_route_dirs = build_route_lookup_maps(
+    route_sequences
+)
+
+recommendation_samples, recommendation_summary = build_sample_recommendations(
+    poi_catalog=poi_catalog_verified,
+    stops=stops,
+    wait_lookup=wait_lookup,
+    route_to_stop_list=route_to_stop_list,
+    route_stop_pos=route_stop_pos,
+    stop_to_route_dirs=stop_to_route_dirs,
+    base_map=base_map,
+    bin_map=bin_map,
+    bin_size=best_bin,
+)
+
+print("Ringkasan skenario rekomendasi:")
+display(recommendation_summary)
+CELL 24:
+val_pred = predict_segments(
+    val_seg, base_lookup_train, bin_lookup_train, bin_size=best_bin
+)
+
+# [PERBAIKAN] Hanya evaluasi segmen yang ada di training
+# Ini mencegah segmen yang tidak pernah muncul di training (prediksi NaN/fallback jauh)
+# dari mengontaminasi metrik evaluasi
+seen_in_train = set(base_lookup_train["segment_id"])
+val_pred_seen = val_pred[val_pred["segment_id"].isin(seen_in_train)].copy()
+usable_all = val_pred.dropna(subset=["pred_min", "travel_time_min"]).copy()
+usable = val_pred_seen.dropna(subset=["pred_min", "travel_time_min"]).copy()
+
+n_unseen = int(len(val_pred)) - int(len(val_pred_seen))
+print(f"Validasi total      : {len(val_pred):,} baris")
+print(f"  Segmen tak dikenal: {n_unseen:,} baris (diprediksi via route-fallback)")
+print(f"  Digunakan evaluasi: {len(usable):,} baris (segmen ada di training)")
+
+metrics = {
+    "model_version": "v1 (winsorize_per_seg + 5fold_cv + route_fallback + capping)",
+    "best_params": {"bin_size": best_bin, "K": best_K, "min_bin_n": best_min_n},
+    "cv_rmse_mean": float(best_cv["cv_rmse_mean"]),
+    "cv_rmse_std": float(best_cv["cv_rmse_std"]),
+    "cv_mae_mean": float(best_cv["cv_mae_mean"]),
+    "cv_mae_std": float(best_cv["cv_mae_std"]),
+    "val_mae_min": (
+        mae(usable["travel_time_min"], usable["pred_min"]) if not usable.empty else None
+    ),
+    "val_rmse_min": (
+        rmse(usable["travel_time_min"], usable["pred_min"])
+        if not usable.empty
+        else None
+    ),
+    "val_mae_all": (
+        mae(usable_all["travel_time_min"], usable_all["pred_min"])
+        if not usable_all.empty
+        else None
+    ),
+    "val_rmse_all": (
+        rmse(usable_all["travel_time_min"], usable_all["pred_min"])
+        if not usable_all.empty
+        else None
+    ),
+    "segments_total": int(len(segments_w)),
+    "segments_unique": int(segments_w["segment_id"].nunique()),
+    "val_rows_usable": int(len(usable)),
+    "val_rows_total": int(len(usable_all)),
+    "val_unseen_segs": n_unseen,
+    "winsorize_params": {"lower_q": 0.05, "upper_q": 0.95, "min_obs": 10},
+}
+
+print("\n" + "=" * 65)
+print("Evaluasi Akurasi Model ETA — ")
+print("=" * 65)
+if metrics["val_mae_min"] is not None:
+    print(f"  MAE  (segmen dikenal)    : {metrics['val_mae_min']:.4f} menit")
+    print(f"  RMSE (segmen dikenal)    : {metrics['val_rmse_min']:.4f} menit")
+    print(f"  MAE  (semua, incl. unseen): {metrics['val_mae_all']:.4f} menit")
+    print(f"  RMSE (semua, incl. unseen): {metrics['val_rmse_all']:.4f} menit")
+    print(f"  ---")
+    print(f"  CV RMSE mean  : {metrics['cv_rmse_mean']:.4f} menit")
+    print(f"  CV RMSE std   : {metrics['cv_rmse_std']:.4f} menit")
+    print(f"  CV MAE mean   : {metrics['cv_mae_mean']:.4f} menit")
+print(f"  Segmen unik    : {metrics['segments_unique']:,}")
+print(f"  Evaluasi pada  : {metrics['val_rows_usable']:,} baris (segmen dikenal)")
+print(f"  Unseen segs    : {metrics['val_unseen_segs']:,} baris (route-fallback)")
+print(f"  Parameter      : bin_size={best_bin}, K={best_K}, min_bin_n={best_min_n}")
+CELL 25:
+# Breakdown error per rute
+if not usable.empty and "route_id" in usable.columns:
+    usable["abs_err"] = np.abs(usable["travel_time_min"] - usable["pred_min"])
+    route_err = (
+        usable.groupby("route_id")["abs_err"]
+        .agg(MAE="mean", N="size")
+        .sort_values("MAE", ascending=False)
+    )
+    print("Breakdown MAE per Rute (5 terburuk):")
+    display(route_err.head())
+    print("Breakdown MAE per Rute (5 terbaik):")
+    display(route_err.tail())
+CELL 26:
+smoke_tests = build_recommendation_smoke_tests(recommendation_summary)
+print("Hasil Smoke Tests Sistem Rekomendasi:")
+display(smoke_tests)
+passed = int((smoke_tests["status"] == "PASS").sum())
+total = len(smoke_tests)
+print(f"\nRingkasan: {passed}/{total} test lulus")
+if passed == total:
+    print("Semua smoke tests lulus. Sistem siap untuk deployment.")
+else:
+    failed = smoke_tests[smoke_tests["status"] != "PASS"]
+    for _, row in failed.iterrows():
+        print(f"  - {row['test_name']}: {row['status']}")
+CELL 29:
+stop_routes = (
+    stop_times.assign(
+        route_dir=stop_times["route_id"].astype(str)
+        + "-"
+        + stop_times["direction_id"].astype(int).astype(str)
+    )
+    .groupby("stop_id", as_index=False)["route_dir"]
+    .agg(lambda x: sorted(pd.unique(x).tolist()))
+    .rename(columns={"route_dir": "routes"})
+)
+schedule_route_ids = sorted(
+    stop_times["route_id"].astype(str).str.upper().unique().tolist()
+)
+route_kml_ids = sorted(
+    route_summary["route_id"].astype(str).str.upper().unique().tolist()
+)
+missing_routes = sorted(set(schedule_route_ids) - set(route_kml_ids))
+route_fc = {
+    "type": "FeatureCollection",
+    "features": [
+        f
+        for f in route_fc_all["features"]
+        if f["properties"]["route_id"] in set(schedule_route_ids)
+    ],
+}
+recommendation_config = {
+    "max_transfers": 3,
+    "transfer_penalty_min": TRANSFER_PENALTY_MIN,
+    "min_stay_min": MIN_STAY_MIN_DEFAULT,
+    "default_types": RECOMMENDER_DEFAULT_TYPES,
+    "exclude_patterns": RECOMMENDER_EXCLUDE_PATTERNS,
+    "score_weights": {
+        "eta_total": 0.35,
+        "walk_distance": 0.20,
+        "transfers": 0.20,
+        "operating_margin": 0.10,
+        "rating": 0.10,
+        "popularity": 0.05,
+        "needs_review_penalty": -0.03,
+        "low_vote_penalty": -0.05,
+    },
+    "model_params": {
+        "winsorize_lower_q": 0.05,
+        "winsorize_upper_q": 0.95,
+        "winsorize_min_obs": 10,
+        "cv_folds": 5,
+    },
+}
+
+route_summary.to_csv(PRE_DIR / "kml_routes.csv", index=False)
+kml_stop_points.to_csv(PRE_DIR / "kml_stop_points.csv", index=False)
+stops.to_csv(PRE_DIR / "stops.csv", index=False)
+stop_times.to_csv(PRE_DIR / "stop_times.csv", index=False)
+stop_events.to_csv(PRE_DIR / "stop_events.csv", index=False)
+segments_w.to_csv(PRE_DIR / "segments_training.csv", index=False)
+place_hours.to_csv(PRE_DIR / "place_hours.csv", index=False)
+poi_nearest_final.to_csv(PRE_DIR / "poi_to_nearest_stop_1km.csv", index=False)
+route_sequences.to_csv(PRE_DIR / "route_sequences.csv", index=False)
+route_sequence_summary.to_csv(PRE_DIR / "route_sequence_summary.csv", index=False)
+
+base_lookup.to_csv(MODEL_DIR / "eta_lookup_segment_mean.csv", index=False)
+bin_lookup.to_csv(MODEL_DIR / "eta_lookup_segment_bin_smoothed.csv", index=False)
+wait_lookup.to_csv(MODEL_DIR / "wait_time_by_hour.csv", index=False)
+with open(MODEL_DIR / "model_metrics.json", "w", encoding="utf-8") as f:
+    json.dump(metrics, f, indent=2)
+with open(MODEL_DIR / "recommendation_config.json", "w", encoding="utf-8") as f:
+    json.dump(recommendation_config, f, ensure_ascii=False, indent=2)
+
+grid_res_cv.to_csv(REPORT_DIR / "ml_grid_search_results.csv", index=False)
+recommendation_summary.to_csv(REPORT_DIR / "recommendation_summary.csv", index=False)
+with open(REPORT_DIR / "kml_shape_missing_routes.json", "w", encoding="utf-8") as f:
+    json.dump(missing_routes, f, indent=2)
+
+stops[["stop_id", "stop_name", "lat", "lon"]].to_json(
+    WEB_DIR / "stops.json", orient="records", force_ascii=False, indent=2
+)
+with open(WEB_DIR / "stop_routes.json", "w", encoding="utf-8") as f:
+    json.dump(to_json_records(stop_routes), f, ensure_ascii=False, indent=2)
+stop_events.to_csv(WEB_DIR / "stop_board_departures.csv", index=False)
+with open(WEB_DIR / "routes_geojson_by_route_id.json", "w", encoding="utf-8") as f:
+    json.dump(route_fc, f, ensure_ascii=False, indent=2)
+poi_catalog_verified.to_csv(WEB_DIR / "poi_catalog.csv", index=False)
+with open(WEB_DIR / "poi_catalog.json", "w", encoding="utf-8") as f:
+    json.dump(to_json_records(poi_catalog_verified), f, ensure_ascii=False, indent=2)
+place_hours.to_csv(WEB_DIR / "poi_opening_hours.csv", index=False)
+if not recommendation_samples.empty:
+    recommendation_samples.to_csv(WEB_DIR / "recommendation_samples.csv", index=False)
+    with open(WEB_DIR / "recommendation_samples.json", "w", encoding="utf-8") as f:
+        json.dump(
+            to_json_records(recommendation_samples), f, ensure_ascii=False, indent=2
+        )
+with open(WEB_DIR / "recommendation_defaults.json", "w", encoding="utf-8") as f:
+    json.dump(recommendation_config, f, ensure_ascii=False, indent=2)
+
+print(
+    "Deployment selesai. Artefak tersimpan di preprocessed/, model/, web_artifacts/, report/"
+)
+print(
+    f'MAE akhir: {metrics["val_mae_min"]:.3f} menit | RMSE: {metrics["val_rmse_min"]:.3f} menit'
+)

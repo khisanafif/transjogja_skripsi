@@ -1,0 +1,29 @@
+TABEL KEBUTUHAN SISTEM - BAB 4.1 BUSINESS UNDERSTANDING
+
+Tabel 4.1.1 Kebutuhan Pengguna
+| No | Kebutuhan Pengguna | Solusi yang Diberikan Sistem |
+|----|--------------------|------------------------------|
+| 1 | Wisatawan membutuhkan panduan untuk memilih tempat wisata yang bisa dijangkau bus. | Fitur rekomendasi destinasi berbasis kedekatan halte (Weighted Ranking). |
+| 2 | Wisatawan kesulitan menghitung waktu tempuh perjalanan menggunakan bus. | Fitur kalkulasi ETA (Estimated Time of Arrival) menggunakan Dijkstra. |
+| 3 | Wisatawan ingin menyusun jadwal liburan dalam satu hari. | Fitur Day Planner (Itinerary) dengan parameter jam berangkat dan durasi stay. |
+| 4 | Wisatawan membutuhkan kepastian waktu tunggu bus di halte. | Fitur pengecekan waktu tunggu (Headway) berdasarkan data historis. |
+
+Tabel 4.1.2 Kebutuhan Fungsional Sistem
+| Kode | Deskripsi Kebutuhan Fungsional | Prioritas |
+|------|--------------------------------|-----------|
+| F-01 | Sistem harus dapat mendeteksi atau menerima input koordinat lokasi pengguna. | Tinggi |
+| F-02 | Sistem harus mempu mencari halte terdekat dari posisi pengguna (max 1200m radius). | Tinggi |
+| F-03 | Sistem harus menghitung rute tercepat antar halte menggunakan algoritma Dijkstra SSSP. | Tinggi |
+| F-04 | Sistem harus merangking tempat wisata berdasarkan bobot (ETA, jalan kaki, rating, popularitas). | Tinggi |
+| F-05 | Sistem harus dapat menampilkan polyline rute bus pada antarmuka peta interaktif. | Menengah |
+| F-06 | Sistem harus dapat merancang jadwal jam demi jam (Itinerary) untuk kumpulan POI terpilih. | Tinggi |
+
+Tabel 4.1.3 Kriteria Rekomendasi
+| Kriteria | Tipe Atribut | Bobot Default | Deskripsi |
+|----------|--------------|---------------|-----------|
+| ETA Keseluruhan | Cost (Makin kecil makin baik) | 35% | Total waktu tempuh menggunakan bus. |
+| Jarak Jalan Kaki | Cost (Makin kecil makin baik) | 20% | Total jarak First-mile dan Last-mile. |
+| Jumlah Transit | Cost (Makin kecil makin baik) | 20% | Frekuensi pergantian rute armada bus. |
+| Margin Tunggu | Cost (Makin kecil makin baik) | 10% | Estimasi toleransi waktu tunggu di halte awal. |
+| Rating POI | Benefit (Makin besar makin baik)| 10% | Skor rating destinasi wisata dari ulasan publik. |
+| Popularitas | Benefit (Makin besar makin baik)| 5% | Total vote count pengunjung pada destinasi tersebut. |

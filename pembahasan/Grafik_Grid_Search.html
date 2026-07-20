@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grafik Bab 4.4 Modeling (Grid Search)</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #f8f9fa; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 30px;}
+        .chart-title { text-align: center; font-size: 1.2rem; font-weight: bold; color: #34495e; margin-bottom: 20px; }
+        .chart-wrapper { position: relative; height: 350px; width: 100%; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="chart-title">Grafik Hasil Grid Search Hyperparameter Model ETA</div>
+    <div class="chart-wrapper">
+        <canvas id="gridSearchChart"></canvas>
+    </div>
+</div>
+
+<script>
+    const ctx = document.getElementById('gridSearchChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Percobaan 1', 'Percobaan 2', 'Percobaan 3 (Best)', 'Percobaan 4'],
+            datasets: [
+                {
+                    label: 'MAE (Menit)',
+                    data: [0.890, 0.450, 0.117, 0.320],
+                    borderColor: '#2ecc71',
+                    backgroundColor: 'rgba(46, 204, 113, 0.2)',
+                    borderWidth: 2,
+                    fill: true,
+                    tension: 0.3
+                },
+                {
+                    label: 'RMSE (Menit)',
+                    data: [1.540, 1.100, 0.779, 0.980],
+                    borderColor: '#e74c3c',
+                    backgroundColor: 'rgba(231, 76, 60, 0.2)',
+                    borderWidth: 2,
+                    fill: true,
+                    tension: 0.3
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: { y: { beginAtZero: true, title: { display: true, text: 'Nilai Error (Menit)' } }, x: { title: { display: true, text: 'Skenario Grid Search' } } }
+        }
+    });
+</script>
+</body>
+</html>
