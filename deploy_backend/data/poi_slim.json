@@ -18,8 +18,8 @@
     "walk_dist_m": 465.33912052421863,
     "walk_time_min": 5.816739006552733,
     "description": "candi prambanan adalah kompleks candi hindu terbesar di indonesia yang dibangun pada abad ke masehi candi ini dipersembahkan untuk trimurti tiga dewa utama hindu yaitu brahma sebagai dewa pencipta wisnu sebagai dewa pemelihara dan siwa sebagai dewa pemusnah berdasarkan prasasti siwagrha nama asli kompleks candi ini adalah siwagrha bahasa sanskerta yang bermakna rumah siwa dan memang di garbagriha ruang utama candi ini bersemayam arca siwa mahadewa setinggi tiga meter yang menujukkan bahwa di candi ini dewa siwa lebih diutamakan",
-    "htm_weekday": 50000,
-    "htm_weekend": 50000,
+    "htm_weekday": "50000",
+    "htm_weekend": "50000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1748938870/candi-prambanan_cpukic.jpg"
   },
   {
@@ -41,8 +41,8 @@
     "walk_dist_m": 563.2310129114242,
     "walk_time_min": 7.040387661392802,
     "description": "gambira loka adalah kebun binatang yang berada di yogyakarta berisi berbagai macam spesies dari belahan dunia seperti orangutan gajah asia simpanse harimau dan lain sebagainya kebun binatang gembira loka menjadi daya tarik tersendiri bagi para wisatawan yogyakarta gembira loka zoo sempat rusak parah akibat gempa bumi yang mengguncang kota yogyakarta tahun tetapi setelah direnovasi kebun binatang gembira loka tetap dicari para wisatawan",
-    "htm_weekday": 20000,
-    "htm_weekend": 25000,
+    "htm_weekday": "20000",
+    "htm_weekend": "25000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1748938869/gembira-loka-zoo_wjklvo.jpg"
   },
   {
@@ -55,7 +55,7 @@
     "vote_count": 30091,
     "open_hhmm": "08:00",
     "close_hhmm": "14:00",
-    "open_days": "Selasa–Minggu",
+    "open_days": "Selasa\u2013Minggu",
     "needs_review": 0,
     "nearest_stop_id": "HT_213",
     "nearest_stop_name": "Senopati",
@@ -64,8 +64,8 @@
     "walk_dist_m": 523.9556072119696,
     "walk_time_min": 6.54944509014962,
     "description": "kompleks keraton merupakan museum yang menyimpan berbagai koleksi milik kesultanan termasuk berbagai pemberian dari raja raja eropa replika pusaka keraton dan gamelan dari segi bangunannya keraton ini merupakan salah satu contoh arsitektur istana jawa yang terbaik memiliki balairung balairung mewah dan lapangan serta paviliun yang luas",
-    "htm_weekday": 8000,
-    "htm_weekend": 8000,
+    "htm_weekday": "8000",
+    "htm_weekend": "8000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1748938868/keraton_rel64b.jpg"
   },
   {
@@ -87,8 +87,8 @@
     "walk_dist_m": 385.98033114949146,
     "walk_time_min": 4.824754139368643,
     "description": "taman sari yogyakarta merupakan salah satu bangunan milik kesultanan yogyakarta yang difungsikan sebagai destinasi wisata namun selain sebagai destinasi wisata taman sari pada saat tertentu juga masih digunakan sebagai tempat ritual oleh keluarga raja dengan bentuk bangunan arsitektur ala portugis jawa bangunan di taman ini menjadi daya tarik utama meskipun sekarang kondisi bangunan tak lagi utuh seperti saat masih difungsikan sebagai taman kesultanan namun tetap saja aura keindahan terpancar kuat dari bangunan bangunan di taman ini",
-    "htm_weekday": 5000,
-    "htm_weekend": 5000,
+    "htm_weekday": "5000",
+    "htm_weekend": "5000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1748938870/taman-sari_yy2dq0.jpg"
   },
   {
@@ -101,7 +101,7 @@
     "vote_count": 15279,
     "open_hhmm": "08:00",
     "close_hhmm": "20:00",
-    "open_days": "Selasa–Minggu",
+    "open_days": "Selasa\u2013Minggu",
     "needs_review": 0,
     "nearest_stop_id": "HT_112",
     "nearest_stop_name": "Malioboro 3",
@@ -110,8 +110,8 @@
     "walk_dist_m": 146.5346532221909,
     "walk_time_min": 1.8316831652773864,
     "description": "benteng vredeburg merupakan salah satu museum peninggalan belanda yang sangat terkenal di jogja karena di museum ini memiliki nilai cerita yang cukup panjang dan masih bertahan hingga saat ini museum benteng vredeburg mengoleksi berbagai macam karya seni berbagai macam patung dan berbagai macam senjata peninggalan belanda",
-    "htm_weekday": 3000,
-    "htm_weekend": 3000,
+    "htm_weekday": "3000",
+    "htm_weekend": "3000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1748941422/vredeburg_ia1nqf.jpg"
   },
   {
@@ -124,7 +124,7 @@
     "vote_count": 14072,
     "open_hhmm": "09:00",
     "close_hhmm": "17:00",
-    "open_days": "Selasa–Minggu",
+    "open_days": "Selasa\u2013Minggu",
     "needs_review": 0,
     "nearest_stop_id": "HT_238",
     "nearest_stop_name": "TVRI - A",
@@ -133,8 +133,8 @@
     "walk_dist_m": 845.8392814639777,
     "walk_time_min": 10.57299101829972,
     "description": "sindu kusuma edupark merupakan wahana bermain berbasis edukasi dan hiburan untuk semua usia yang buka paling pagi dan tutup paling malam di jogjakarta destinasi wisata ini menyuguhkan sebuah tempat bermain bagi keluarga yang lengkap dengan berbagai wahana permainan yang seru dan juga menantang wahana wahana seperti kora kora bianglala waterpark dan light festival menjadi wahana terfavorit bagi para wisatawan selain itu tersedia juga restoran berkonsep industrial fun cafe dengan harga yang murah dan terjangkau cocok untuk anda sekeluarga semua transaksi di sindu kusuma edupark ini menggunakan kartu khusus yang bisa diperoleh di loket tiket jadi tidak repot lagi mengeluarkan uang tunai selain wahana permainan di ske ini juga ada beberapa foto spot yang cukup bagus untuk dijadikan background foto",
-    "htm_weekday": 20000,
-    "htm_weekend": 20000,
+    "htm_weekday": "20000",
+    "htm_weekend": "20000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1748941422/SKE_ld0mfv.jpg"
   },
   {
@@ -155,9 +155,9 @@
     "stop_lon": 110.365659,
     "walk_dist_m": 153.45736118066014,
     "walk_time_min": 1.9182170147582518,
-    "description": "tugu ini sekarang merupakan salah satu objek pariwisata yogyakarta dan sering dikenal dengan istilah tugu pal putih pal juga berarti tugu karena warna cat yang digunakan sejak dulu adalah warna putih tugu pal ini berbentuk bulat panjang dengan bola kecil dan ujung yang runcing di bagian atasnya jika dilihat dari keraton yogyakarta ke arah utara maka akan terlihat bahwa jalan malioboro jalan margo utomo tugu yogyakarta dan jalan a m sangadji membentuk garis lurus menuju puncak gunung merapi yang dikenal sebagai garis imajiner yogyakarta",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "description": "tugu ini sekarang merupakan salah satu objek pariwisata yogyakarta dan sering dikenal dengan istilah \u0093tugu pal putih\u0094 pal juga berarti tugu karena warna cat yang digunakan sejak dulu adalah warna putih tugu pal ini berbentuk bulat panjang dengan bola kecil dan ujung yang runcing di bagian atasnya jika dilihat dari keraton yogyakarta ke arah utara maka akan terlihat bahwa jalan malioboro jalan margo utomo tugu yogyakarta dan jalan a m sangadji membentuk garis lurus menuju puncak gunung merapi yang dikenal sebagai garis imajiner yogyakarta",
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1748941421/tugu-jogja_yuyc8j.jpg"
   },
   {
@@ -179,8 +179,8 @@
     "walk_dist_m": 92.67539948460349,
     "walk_time_min": 1.1584424935575437,
     "description": "xt square merupakan kawasan yang dibangun dengan konsep terpadu yang ditawarkan kepada masyarakat dalam satu paket pusat wisata belanja yakni what to see what to eat dan what to buy didesain sebagai ruang publik dengan konsep citywalk didukung dengan area kuliner serta area pertunjukan seni semakin menunjang aktifitas wisata belanja yang nyaman dan menyenangkan xt square dibangun untuk kepuasan pengunjung",
-    "htm_weekday": 25000,
-    "htm_weekend": 25000,
+    "htm_weekday": "25000",
+    "htm_weekend": "25000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1748941641/xt-square_ztlvg3.jpg"
   },
   {
@@ -193,7 +193,7 @@
     "vote_count": 11302,
     "open_hhmm": "08:00",
     "close_hhmm": "16:00",
-    "open_days": "Selasa–Minggu",
+    "open_days": "Selasa\u2013Minggu",
     "needs_review": 0,
     "nearest_stop_id": "HT_119",
     "nearest_stop_name": "Monjali - A",
@@ -202,8 +202,8 @@
     "walk_dist_m": 243.71750391416555,
     "walk_time_min": 3.0464687989270693,
     "description": "museum monumen jogja kembali adalah sebuah museum budaya dan sejarah perjuangan kemerdekaan republik indonesia yang ada di kota yogyakarta dan dikelola oleh departemen kebudayaan dan pariwisata museum yang berada di bagian utara kota ini banyak dikunjungi oleh para pelajar dalam acara darmawisata museum monumen dengan bentuk kerucut ini terdiri dari lantai dan dilengkapi dengan ruang perpustakaan serta ruang serbaguna pada rana pintu masuk dituliskan sejumlah nama pahlawan yang gugur di daerah wehrkreise iii ris antara tanggal desember sampai dengan juni dalam ruang museum di lantai terdapat benda benda koleksi realia replika foto dokumen heraldika berbagai jenis senjata bentuk evokatif dapur umum dalam suasana perang kemerdekaan tandu dan dokar kereta kuda yang pernah dipergunakan oleh panglima besar jenderal soedirman juga disimpan di sini di ruang museum nomor monumen jogja kembali beralamat di jalan raya ring road utara sleman yogyakarta",
-    "htm_weekday": 15000,
-    "htm_weekend": 15000,
+    "htm_weekday": "15000",
+    "htm_weekend": "15000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1748941420/monumen-jogja-kembali_opjcw6.jpg"
   },
   {
@@ -216,7 +216,7 @@
     "vote_count": 9828,
     "open_hhmm": "08:00",
     "close_hhmm": "15:30",
-    "open_days": "Selasa–Minggu",
+    "open_days": "Selasa\u2013Minggu",
     "needs_review": 0,
     "nearest_stop_id": "HT_062",
     "nearest_stop_name": "Janti Selatan",
@@ -224,9 +224,9 @@
     "stop_lon": 110.410482,
     "walk_dist_m": 736.1693580891927,
     "walk_time_min": 9.202116976114908,
-    "description": "museum pusat tni au dirgantara mandala adalah museum yang digagas oleh tni angkatan udara untuk mengabadikan peristiwa berbudaya dan sejarah dalam lingkungan tni au bermarkas di kompleks pangkalan udara adi sutjipto yogyakarta museum ini sebelumnya berada berada di jalan tanah abang bukit jakarta dan diresmikan pada april oleh panglima au laksamana roesmin noerjadin lalu dipindahkan ke yogyakarta pada juli",
-    "htm_weekday": 3000,
-    "htm_weekend": 3000,
+    "description": "museum pusat tni au \u0093dirgantara mandala\u0094 adalah museum yang digagas oleh tni angkatan udara untuk mengabadikan peristiwa berbudaya dan sejarah dalam lingkungan tni au bermarkas di kompleks pangkalan udara adi sutjipto yogyakarta museum ini sebelumnya berada berada di jalan tanah abang bukit jakarta dan diresmikan pada april oleh panglima au laksamana roesmin noerjadin lalu dipindahkan ke yogyakarta pada juli",
+    "htm_weekday": "3000",
+    "htm_weekend": "3000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749348840/museum-dirgantara-mandala_eoshpn.jpg"
   },
   {
@@ -248,8 +248,8 @@
     "walk_dist_m": 313.703245147686,
     "walk_time_min": 3.921290564346075,
     "description": "masjid gedhe kauman dibangun oleh sri sultan hamengku buwono i bersama kyai faqih ibrahim diponingrat penghulu kraton pertama dan kyai wiryokusumo sebagai arsiteknya masjid ini dibangun pada hari ahad wage mei m atau rabi ulakhir h masjid gedhe kauman merupakan tempat untuk beribadah namun masjid ini juga menjadi tempat wisata yang cukup terkenal meskipun demikian fungsi utama masjid sebagai tempat ibadah masih terjaga dengan sangat baik lengkap dengan semua fasilitas yang diperlukan",
-    "htm_weekday": 10000,
-    "htm_weekend": 10000,
+    "htm_weekday": "10000",
+    "htm_weekend": "10000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749348839/Masjid-Gedhe-Kauman_ts5rcm.jpg"
   },
   {
@@ -271,8 +271,8 @@
     "walk_dist_m": 707.0728844159694,
     "walk_time_min": 8.838411055199618,
     "description": "waduk tambakboyo kabupaten sleman daerah istimewa yogyakarta ini dibangun pada tahun dan selesai tahun pembangunan yang memakan waktu lima tahun ini memang sudah diperhitungkan dengan matang pada mulanya embung atau waduk ini dibangun sebagai tempat penampungan air untuk cadangan warga sleman namun seiring dengan berjalannya waktu embung tambakboyo menjadi salah satu wisata alam gratis yang banyak peminatnya",
-    "htm_weekday": 2000,
-    "htm_weekend": 2000,
+    "htm_weekday": "2000",
+    "htm_weekend": "2000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749348840/tambakboyo_przhxk.jpg"
   },
   {
@@ -294,8 +294,8 @@
     "walk_dist_m": 100.95715025971082,
     "walk_time_min": 1.2619643782463852,
     "description": "berawal dari keinginan bahwa indonesia tidak boleh kalah dengan negara lain dalam bidang pariwisata direktur utama pt demata maris indonesia yaitu bapak petrus fx kusuma mendapatkan inspirasi untuk mengadaptasi konsep tempat wisata dari luar negeri agar dapat dibawa ke indonesia bertujuan agar masyarakat di indonesia dapat mengunjungi tempat serupa namun tidak sama yang tetap lekat dengan unsur edukatif inovatif dan entertaining ditawarkan dengan harga tiket masuk yang low cost highly entertaining sehingga memberikan kesempatan terhadap semua kalangan untuk dapat berwisata dengan adanya beberapa tempat wisata yang sudah ada dan yang akan dibangun oleh pt demata maris indonesia tidak hanya merupakan sebuah cita cita dan mimpi yang terwujud namun juga sebuah bisnis yang potensial yang memberikan kesempatan kepada seluruh masyarakat indonesia untuk berwisata dengan harga tiket yang murah",
-    "htm_weekday": 40000,
-    "htm_weekend": 40000,
+    "htm_weekday": "40000",
+    "htm_weekend": "40000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749348844/de-mata-trick-eye-museum_xreqzs.jpg"
   },
   {
@@ -317,8 +317,8 @@
     "walk_dist_m": 119.05782936855952,
     "walk_time_min": 1.4882228671069941,
     "description": "kalau pelangi biasanya ada di siang hari pasca hujan maka di taman pelangi yogyakarta pengunjung justru bisa menikmatinya setiap malam hari ya ini lantaran taman ini merupakan taman lampion beraneka warna dan rupa pengunjung bisa mengarahkan diri ke deretan lampion yang berbentuk flora dan fauna ada juga lampion berbentuk tokoh kartun disney dan kartun jepang dinosaurus naga serta kehidupan bawah laut yang sangat menarik perhatian terutama anak anak tak meninggalkan budaya dan sejarah ada juga lampion yang berbentuk wajah para tokoh pemimpin bangsa buka sejak petang taman ini memang sangat cocok dijadikan pilihan destinasi rekreasi keluarga saat malam hari",
-    "htm_weekday": 15000,
-    "htm_weekend": 20000,
+    "htm_weekday": "15000",
+    "htm_weekend": "20000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749352218/taman-pelangi_soffxd.jpg"
   },
   {
@@ -340,8 +340,8 @@
     "walk_dist_m": 653.9712818326204,
     "walk_time_min": 8.174641022907755,
     "description": "situs warungboto merupakan petilasan yang dibangun pada masa pemerintahan sultan hamengkubuwono i kemudian pembangunannya diteruskan pada masa pemerintahan sultan hamengkubuwono ii dulunya tempat ini khusus dijadikan sebagai tempat pemandian dikarenakan adanya sumber mata air di lokasi tersebut situs warungboto berada di tengah kota jogja tepatnya di umbulharjo objek wisata ini merupakan peninggalan berbudaya dan sejarah yang dulu dibangun oleh keluarga keraton saat ini area situs telah dibersihkan dan direnovasi sehingga dapat dikunjungi wisatawan tentunya tempat ini begitu menarik karena bangunannya yang unik dan instagramable",
-    "htm_weekday": 5000,
-    "htm_weekend": 7500,
+    "htm_weekday": "5000",
+    "htm_weekend": "7500",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749352218/situs-warungboto_qaxt2m.jpg"
   },
   {
@@ -354,7 +354,7 @@
     "vote_count": 5041,
     "open_hhmm": "08:00",
     "close_hhmm": "20:00",
-    "open_days": "Selasa–Minggu",
+    "open_days": "Selasa\u2013Minggu",
     "needs_review": 0,
     "nearest_stop_id": "HT_147",
     "nearest_stop_name": "Pasar Serangan - A",
@@ -363,8 +363,8 @@
     "walk_dist_m": 142.6935420729868,
     "walk_time_min": 1.783669275912335,
     "description": "bagi para pecinta kesenian tentu tidak akan pernah melewatkan yang namanya tempat atau gedung yang menyimpan berbagai hasil kesenian salah satu gedung kesenian di kawasan yogyakarta yang cukup terkenal adalah jogja national museum letaknya berada di jalan amri yahya yogyakarta ini museum ini sendiri sudah berdiri cukup lama dan menyajikan berbagai karya seni menarik nanapik secara singkat museum ini mempertontonkan aneka karya seni kontemporer yang unik dan berkualitas tinggi bagi anda yang sangat suka atau sedang menempuh studi seputar karya seni kontemporer maka keputusan untuk berkunjung ke tempat ini sangatlah tepat anda akan disambut dengan karya karya seni rupa dari berbagai seniman dan juga dengan kreativitas serta keunikannya masing masing",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749352217/jnm_gwv2x6.jpg"
   },
   {
@@ -377,7 +377,7 @@
     "vote_count": 4846,
     "open_hhmm": "08:30",
     "close_hhmm": "16:00",
-    "open_days": "Selasa–Minggu",
+    "open_days": "Selasa\u2013Minggu",
     "needs_review": 0,
     "nearest_stop_id": "HT_235",
     "nearest_stop_name": "Suryotomo",
@@ -386,8 +386,8 @@
     "walk_dist_m": 168.24211007157086,
     "walk_time_min": 2.1030263758946357,
     "description": "taman pintar yogyakarta adalah wahana wisata yang terdapat di pusat kota yogyakarta tepatnya di jalan panembahan senopati no yogyakarta di kawasan benteng vredeburg taman ini memadukan tempat wisata rekreasi maupun edukasi dalam satu lokasi tempat rekreasi ini sangat baik untuk anak anak dalam masa perkembangan taman ini khususnya pada wahana pendidikan anak usia dini dilengkapi dengan teknologi interaktif digital serta pemetaan video yang akan memacu imajinasi anak serta ketertarikan mereka terhadap teknologi",
-    "htm_weekday": 20000,
-    "htm_weekend": 20000,
+    "htm_weekday": "20000",
+    "htm_weekend": "20000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749352217/taman-pintar_by7uyy.jpg"
   },
   {
@@ -409,8 +409,8 @@
     "walk_dist_m": 186.212970144772,
     "walk_time_min": 2.32766212680965,
     "description": "malioboro adalah jantung kota jogja meskipun terkenal sebagai surga belanja cendera mata dan barang kerajinan ternyata tak sedikit wisatawan dan orang lokal mendatangi malioboro pagi pagi sekali untuk berolahraga atau sekedar menikmati udara segar sambil mencari sarapan",
-    "htm_weekday": 3000,
-    "htm_weekend": 3000,
+    "htm_weekday": "3000",
+    "htm_weekend": "3000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749352229/malioboro_vyneqo.jpg"
   },
   {
@@ -432,8 +432,8 @@
     "walk_dist_m": 260.5366515925097,
     "walk_time_min": 3.2567081449063715,
     "description": "blue lagoon jogja merupakan salah satu obyek wisata yang di jadikan tempat pemandian sumber mata air ini yang muncul dari permukaan tanah di dalam kolam apabila anda melihat ke dalam kolam akan terlihat gelembung gelembung kecil yang muncul dari permukaan tanah hal itu menunjukkan bahwa terdapat air yang terus menerus muncul dari permukaan tanah tersebut meskipun blue lagoon di jogja ini sudah lama namun tempat wisata ini mulai tenar dipertengahan tahun pemandian blue lagoon ini terletak di desa dalem widodomartani ngemplak sleman yogyakarta",
-    "htm_weekday": 3000,
-    "htm_weekend": 3000,
+    "htm_weekday": "3000",
+    "htm_weekend": "3000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749352216/blue-lagoon_kffpdw.jpg"
   },
   {
@@ -455,8 +455,8 @@
     "walk_dist_m": 164.98248529494938,
     "walk_time_min": 2.062281066186867,
     "description": "bundaran ugm merupakan gerbang masuk utama universitas gadjah mada",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749352216/bundaran-ugm_e7itol.jpg"
   },
   {
@@ -469,7 +469,7 @@
     "vote_count": 2159,
     "open_hhmm": "08:00",
     "close_hhmm": "16:00",
-    "open_days": "Selasa–Minggu",
+    "open_days": "Selasa\u2013Minggu",
     "needs_review": 0,
     "nearest_stop_id": "HT_250",
     "nearest_stop_name": "Terminal Prambanan",
@@ -478,8 +478,8 @@
     "walk_dist_m": 878.7171977514018,
     "walk_time_min": 10.983964971892522,
     "description": "candi sojiwan memiliki keunikan keunikan ini berasal dari beberapa panel relief yang bercerita tentang cerita cerita binatang jika dipahami lebih dalam cerita cerita ini menyampaikan pesan pesan moral yang tidak lekang oleh waktu pesan pesan moral ini juga sangat berguna untuk menjalani kehidupan sehari hari setelah dilakukan penelitian terdapat beberapa temuan menarik salah satunya adalah parit keliling parit keliling ini sebagian berada di pemukiman warga di dalam parit kelagian ditemukan arca pondasi candi struktur pagar batu candi lepas struktur dan batu candi di sekitar permukiman warga yang berada di sebelah selatan candi induk candi sojiwan berada di kawasan siwa plateu yang banyak terdapat candi baik candi berlatar belakang agama hindu maupun budha hal ini menunjukkan bahwa sejak dulu nenek moyang kita telah hidup harmonis dan sangat toleran nilai nilai toleransi ini sangat dibutuhkan masyarakat indonesia sekarang ini mengingat kita berbeda beda keyakinan",
-    "htm_weekday": 5000,
-    "htm_weekend": 5000,
+    "htm_weekday": "5000",
+    "htm_weekend": "5000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749357023/CANDI-03-SOJIWAN_vy8nso.jpg"
   },
   {
@@ -492,7 +492,7 @@
     "vote_count": 1848,
     "open_hhmm": "08:00",
     "close_hhmm": "16:00",
-    "open_days": "Selasa–Minggu",
+    "open_days": "Selasa\u2013Minggu",
     "needs_review": 0,
     "nearest_stop_id": "HT_026",
     "nearest_stop_name": "De Britto",
@@ -501,8 +501,8 @@
     "walk_dist_m": 279.101346667393,
     "walk_time_min": 3.4887668333424124,
     "description": "museum affandi merupakan salah satu museum seni di daerah istimewa yogyakarta indonesia museum yang berada di tepi sungai gajah wong ini menyimpan berbagai macam lukisan karya affandi selain itu museum ini juga menyimpan banyak benda peninggalan affandi lainnya seperti mobil sepeda onthel dan masih banyak lagi ada lebih dari lukisan termasuk beberapa potret diri dan karya dari seniman terkenal lainnya seperti sudjojono hendra gunawan dan barli jangan lupa untuk mengambil foto rumah affandi yang ikonis dengan atap yang berbentuk pelepah pisang",
-    "htm_weekday": 30000,
-    "htm_weekend": 30000,
+    "htm_weekday": "30000",
+    "htm_weekend": "30000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749357024/museum-affandi_owqr3l.jpg"
   },
   {
@@ -515,7 +515,7 @@
     "vote_count": 1778,
     "open_hhmm": "08:00",
     "close_hhmm": "16:00",
-    "open_days": "Selasa–Minggu",
+    "open_days": "Selasa\u2013Minggu",
     "needs_review": 0,
     "nearest_stop_id": "HT_118",
     "nearest_stop_name": "Mirota Godean - A",
@@ -524,8 +524,8 @@
     "walk_dist_m": 641.3467634347026,
     "walk_time_min": 8.016834542933783,
     "description": "museum monumen pangeran diponegoro adalah museum sekaligus monumen kediaman pangeran ketika dikepung oleh pihak belanda museum ini berisi berbagai peninggalan pangeran diponegoro di museum ini juga terdapat pendapa dan pringgitan yng didalamnya berisi benda benda berbudaya dan sejarah benda berbudaya dan sejarah tersebut berupa berbagai jenis senjata tradisional seperti keris tombak pedang panah dan masih banyak lagi senjata yang dikoleksi di dalam museum ini i museum monument pangeran diponegoro ini juga terdapat dinding yang berlubang yang menjadi jalan keluar pangeran diponegoro untuk bisa lolos dari kepungan penjajah belanda di museum ini juga terdapat barang peninggalan milik sri sultan hamengku buwono ii yaitu ketipung dan wilahan bonang penembung yang terbuat dari kayu dan perunggu yang berwarna merah dan kuning barang peninggalan sri sultan hb ii yang ada mencapai lebih dari buah disana juga terdapat dua senjata meriam yang terletak di depan dan disebelah timur pendopo serta ada berbagai macam peralatan rumah tangga seperti tempat menaruh siri canting teko dan bokor",
-    "htm_weekday": 2000,
-    "htm_weekend": 2000,
+    "htm_weekday": "2000",
+    "htm_weekend": "2000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749357024/museum-diponegoro_vfmtfo.jpg"
   },
   {
@@ -538,7 +538,7 @@
     "vote_count": 1711,
     "open_hhmm": "08:00",
     "close_hhmm": "15:30",
-    "open_days": "Selasa–Minggu",
+    "open_days": "Selasa\u2013Minggu",
     "needs_review": 0,
     "nearest_stop_id": "HT_112",
     "nearest_stop_name": "Malioboro 3",
@@ -547,8 +547,8 @@
     "walk_dist_m": 305.9128385801936,
     "walk_time_min": 3.82391048225242,
     "description": "useum sonobudoyo unit pertama yang ada di dekat alun alun keraton yogyakarta yang memiliki bentuk seperti bangunan rumah joglo dengan gaya masjid keraton kasepuhan cirebon di museum ini terdapat koleksi alat musik seperti replika andong wayang rama sinta dan juga lesmana anoman hingga rahwana kemudian koleksi keris koleksi batik dan koleksi buku kebudayaan",
-    "htm_weekday": 3000,
-    "htm_weekend": 3000,
+    "htm_weekday": "3000",
+    "htm_weekend": "3000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749357024/museum-sonobudoyo-I_rzpvjc.jpg"
   },
   {
@@ -570,8 +570,8 @@
     "walk_dist_m": 17.731633137508094,
     "walk_time_min": 0.22164541421885117,
     "description": "kids fun cabang galeria mall menawarkan tema wild wild west yang membawa kita ke dunia barat dimana kaum koboi dan indian bertemu tidak hanya sekedar nama desain interiornya pun disesuai dengan tema yang diusung di beberapa bagian diletakkan patung koboi dan indian untuk memperkuat suasana belum lagi area counter yang sekilas mirip bar di film film bertema sejenis",
-    "htm_weekday": 60000,
-    "htm_weekend": 60000,
+    "htm_weekday": "60000",
+    "htm_weekend": "60000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749357022/kids-fun-galleria_bzmumi.jpg"
   },
   {
@@ -584,7 +584,7 @@
     "vote_count": 1291,
     "open_hhmm": "08:00",
     "close_hhmm": "16:00",
-    "open_days": "Selasa–Minggu",
+    "open_days": "Selasa\u2013Minggu",
     "needs_review": 0,
     "nearest_stop_id": "HT_138",
     "nearest_stop_name": "Pasar Kalasan - A",
@@ -593,8 +593,8 @@
     "walk_dist_m": 379.64272931148605,
     "walk_time_min": 4.745534116393576,
     "description": "candi kalasan adalah candi yang dipersembahkan untuk dewi tara yang dinding luarnya dilapisi semen kuno candi budha tertua di yogyakarta ini dibangun oleh rakai panangkaran raja dari dinasti syailendra yang juga mengkonsep pendirian borobudur",
-    "htm_weekday": 5000,
-    "htm_weekend": 5000,
+    "htm_weekday": "5000",
+    "htm_weekend": "5000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749364690/Candi-Kalasan_l5vbyn.jpg"
   },
   {
@@ -607,7 +607,7 @@
     "vote_count": 1182,
     "open_hhmm": "08:00",
     "close_hhmm": "16:00",
-    "open_days": "Selasa–Minggu",
+    "open_days": "Selasa\u2013Minggu",
     "needs_review": 0,
     "nearest_stop_id": "HT_094",
     "nearest_stop_name": "Kotabaru",
@@ -616,8 +616,8 @@
     "walk_dist_m": 29.433278221830307,
     "walk_time_min": 0.3679159777728788,
     "description": "museum sandi adalah museum satu satunya yang menyimpan alat alat untuk mengirim pesan rahasia museum ini juga merekam segala jenis persandian di indonesia bahkan dunia jadi jika anda yang suka memecahkan sandi maka museum ini adalah tempat yang cocok untuk anda kunjungi setiba anda di loby museum sandi akan disambut hangat oleh pengelola museum sandi orang orangnya ramah baik dan legowo banget pada masa itu museum sandi ini adalah museum yang mengoleksi segala jenis benda dan alat untuk memecahkan sandi mulai dari telegraf buku kode sandi sampai mesin mesin sandi yang terbuat di indonesia maupun luar negeri",
-    "htm_weekday": 3000,
-    "htm_weekend": 3000,
+    "htm_weekday": "3000",
+    "htm_weekend": "3000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749364702/Museum-Sandi_ihhtcf.jpg"
   },
   {
@@ -630,7 +630,7 @@
     "vote_count": 938,
     "open_hhmm": "08:00",
     "close_hhmm": "16:00",
-    "open_days": "Selasa–Minggu",
+    "open_days": "Selasa\u2013Minggu",
     "needs_review": 0,
     "nearest_stop_id": "HT_138",
     "nearest_stop_name": "Pasar Kalasan - A",
@@ -639,8 +639,8 @@
     "walk_dist_m": 1009.2801656492124,
     "walk_time_min": 12.616002070615156,
     "description": "candi sari juga disebut candi bendah adalah candi buddha yang berada tidak jauh dari candi sambi sari candi kalasan dan candi prambanan yaitu di bagian sebelah timur laut dari kota yogyakarta dan tidak begitu jauh dari bandara adisucipto candi ini dibangun pada sekitar abad ke dan ke pada saat zaman kerajaan mataram kuno dengan bentuk yang sangat indah pada bagian atas candi ini terdapat buah stupa seperti yang tampak pada stupa di candi borobudur dan tersusun dalam deretan sejajar bentuk bangunan candi serta ukiran relief yang ada pada dinding candi sangat mirip dengan relief di candi plaosan beberapa ruangan bertingkat dua berada persis di bawah masing masing stupa dan diperkirakan dipakai untuk tempat meditasi bagi para pendeta buddha biksu pada zaman dahulunya candi sari pada masa lampau merupakan suatu vihara buddha dan dipakai sebagai tempat belajar dan berguru bagi para biksu selain untuk wisata budaya dan sejarah pengunjung juga dapat bersepeda bersepeda di candi ini tidak akan memakan banyak waktu dikarenakan candi yang berukuran kecil selain di sekitar candi para pengunjung juga dapat bersepeda menyusuri candi candi lainnya yang lokasinya berdekatan para pengunjung dapat bercengkarama dengan penduduk sekitar candi untuk memperkaya cerita dan budaya dengan dalam dari candi sari ini sendiri",
-    "htm_weekday": 2000,
-    "htm_weekend": 2000,
+    "htm_weekday": "2000",
+    "htm_weekend": "2000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749364693/Candi_Sari_f1awbo.jpg"
   },
   {
@@ -653,7 +653,7 @@
     "vote_count": 836,
     "open_hhmm": "08:00",
     "close_hhmm": "16:00",
-    "open_days": "Selasa–Minggu",
+    "open_days": "Selasa\u2013Minggu",
     "needs_review": 0,
     "nearest_stop_id": "HT_123",
     "nearest_stop_name": "Museum Perjuangan",
@@ -662,8 +662,8 @@
     "walk_dist_m": 150.05794210287348,
     "walk_time_min": 1.8757242762859185,
     "description": "museum perjuangan memiliki tempat utama yang berisi peninggalan budaya dan sejarah ruangan yang pertama di taat secara rapi di luar gedung disana menyajikan patung kepala pahlawan nasional relief yang menjelaskan dan bercerita bagaimana lahirnya boedi utomo masa penjajahan jepang dan partai sarekat islam selain itu juga membahas pd dua kongres pemuda kesatu masa pindahnya ibukota negara ke jogja peristiwa maret dan pertempuran puputan di bali",
-    "htm_weekday": 1000,
-    "htm_weekend": 1000,
+    "htm_weekday": "1000",
+    "htm_weekend": "1000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749364691/museum-perjuangan_zaztrl.jpg"
   },
   {
@@ -685,8 +685,8 @@
     "walk_dist_m": 150.79287383777944,
     "walk_time_min": 1.884910922972243,
     "description": "jalan pasar kembang merupakan gang kecil yang merupakan perkampungan penduduk banyak penduduk yang tinggal di kawasan ini mereka hidup dengan damai dan tak sedikit yang banyak meraup rezeki karena kedatangan wisatawan penginapan banyak berdiri di tengah suasana perkampungan dengan keramahan para penduduknya",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749364690/pasar-kembang_hhdsi9.jpg"
   },
   {
@@ -708,8 +708,8 @@
     "walk_dist_m": 242.36807825410142,
     "walk_time_min": 3.029600978176268,
     "description": "taman lampion atau juga sering disebut taman pelangi monjali adalah salah satu wisata saat malam hari yang bisa anda kunjungi bersama keluarga atau teman selain berjalan jalan menikmati gemerlap lampu anda juga bisa melakukan kegiatan seru lainnya seperti dengan mengendarai becak mini bermain bola air bugee jumping atv trampolin perahu dayung kereta mini dan lain lain asiknya lagi area wisata taman lampion juga sering diadakan live konser musik",
-    "htm_weekday": 15000,
-    "htm_weekend": 20000,
+    "htm_weekday": "15000",
+    "htm_weekend": "20000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749364687/taman-pelangi_1_pzzqn1.jpg"
   },
   {
@@ -731,8 +731,8 @@
     "walk_dist_m": 574.2352163748003,
     "walk_time_min": 7.177940204685004,
     "description": "monumen ini merupakan simbol penghormatan atas perjuangan tentara nasional indonesia angkatan udara dalam mempertahankan kedaulatan negara terletak di kompleks lanud adisutjipto monumen ini menyuguhkan koleksi pesawat tempur bersejarah serta dokumentasi perjuangan tni au tempat ini cocok untuk wisata edukatif sekaligus menumbuhkan rasa nasionalisme",
-    "htm_weekday": 6000,
-    "htm_weekend": 6000,
+    "htm_weekday": "6000",
+    "htm_weekend": "6000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749364687/monumen-perjuangan-tni_hsuym3.jpg"
   },
   {
@@ -745,7 +745,7 @@
     "vote_count": 735,
     "open_hhmm": "08:00",
     "close_hhmm": "16:00",
-    "open_days": "Selasa–Minggu",
+    "open_days": "Selasa\u2013Minggu",
     "needs_review": 0,
     "nearest_stop_id": "HT_075",
     "nearest_stop_name": "KHA Dahlan - A",
@@ -754,8 +754,8 @@
     "walk_dist_m": 544.9564181019726,
     "walk_time_min": 6.811955226274658,
     "description": "museum ini menampilkan koleksi kereta kencana milik keraton yogyakarta yang digunakan sejak era kesultanan pengunjung dapat melihat langsung kereta kereta antik yang sarat nilai sejarah dan budaya jawa museum ini sangat cocok bagi pecinta sejarah dan budaya sekaligus memperkaya wawasan tentang tradisi keraton",
-    "htm_weekday": 20000,
-    "htm_weekend": 20000,
+    "htm_weekday": "20000",
+    "htm_weekend": "20000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749368365/museum-kereta_om05vj.jpg"
   },
   {
@@ -777,8 +777,8 @@
     "walk_dist_m": 221.56373973087852,
     "walk_time_min": 2.7695467466359815,
     "description": "goa rancang kencono adalah gua purba yang dipercaya menjadi tempat pertapaan dan persembunyian para pejuang di dalam gua terdapat ruangan luas serta pohon besar yang tumbuh dari dasar gua menciptakan suasana mistis dan eksotis tempat ini menyuguhkan kombinasi antara wisata alam dan sejarah yang unik",
-    "htm_weekday": 15000,
-    "htm_weekend": 15000,
+    "htm_weekday": "15000",
+    "htm_weekend": "15000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749368364/goa-rancang_jrh13f.jpg"
   },
   {
@@ -791,7 +791,7 @@
     "vote_count": 718,
     "open_hhmm": "08:00",
     "close_hhmm": "16:00",
-    "open_days": "Selasa–Minggu",
+    "open_days": "Selasa\u2013Minggu",
     "needs_review": 0,
     "nearest_stop_id": "HT_240",
     "nearest_stop_name": "Tamansari",
@@ -800,8 +800,8 @@
     "walk_dist_m": 368.58049435759034,
     "walk_time_min": 4.607256179469879,
     "description": "sumur gumuling adalah salah satu tempat untuk ibadah atau kegiatan agama pada masa lalu sumur gumuling merupakan masjid pada zaman pemerintahan sri sultan hamengkubuwana i dan ii",
-    "htm_weekday": 10000,
-    "htm_weekend": 10000,
+    "htm_weekday": "10000",
+    "htm_weekend": "10000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749368365/sumur-gumuling_fxtwzp.jpg"
   },
   {
@@ -823,8 +823,8 @@
     "walk_dist_m": 689.7172364125678,
     "walk_time_min": 8.621465455157097,
     "description": "galeri seni kontemporer yang menjadi ruang ekspresi kreatif seniman yogyakarta selain pameran seni tempat ini juga menjadi ruang diskusi pertunjukan dan kegiatan budaya",
-    "htm_weekday": 25000,
-    "htm_weekend": 25000,
+    "htm_weekday": "25000",
+    "htm_weekend": "25000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749368368/bale-banjar-3-800x542_pr4diy.jpg"
   },
   {
@@ -846,8 +846,8 @@
     "walk_dist_m": 114.9863851046879,
     "walk_time_min": 1.4373298138085988,
     "description": "bangunan bergaya gotik yang ikonik di tepi sungai code sering dijadikan latar foto karena arsitekturnya yang unik meski bukan tempat ibadah aktif gereja ini menarik perhatian banyak wisatawan",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749368368/Gereja-Sayidan_ddkqat.jpg"
   },
   {
@@ -860,7 +860,7 @@
     "vote_count": 599,
     "open_hhmm": "08:00",
     "close_hhmm": "16:00",
-    "open_days": "Selasa–Minggu",
+    "open_days": "Selasa\u2013Minggu",
     "needs_review": 0,
     "nearest_stop_id": "HT_131",
     "nearest_stop_name": "Pandeyan",
@@ -869,8 +869,8 @@
     "walk_dist_m": 69.21464295681517,
     "walk_time_min": 0.8651830369601896,
     "description": "museum ilusi optik yang menyuguhkan berbagai instalasi foto d dan ruang terbalik sangat cocok untuk wisata keluarga dan penggemar konten foto unik di media sosial",
-    "htm_weekday": 40000,
-    "htm_weekend": 50000,
+    "htm_weekday": "40000",
+    "htm_weekend": "50000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749368367/D_Walik_awtror.jpg"
   },
   {
@@ -892,8 +892,8 @@
     "walk_dist_m": 166.58787159906905,
     "walk_time_min": 2.082348394988363,
     "description": "titik pusat kota yogyakarta yang menjadi tempat berkumpulnya wisatawan seniman jalanan dan berbagai kegiatan publik landmark penting yang sering dijadikan titik awal penjelajahan malioboro",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749368368/nol-kilometer_kbkl3x.png"
   },
   {
@@ -915,8 +915,8 @@
     "walk_dist_m": 783.4452978020344,
     "walk_time_min": 9.793066222525429,
     "description": "waterbyur adalah taman air keluarga yang menawarkan berbagai wahana permainan air seperti kolam renang anak seluncuran dan ember tumpah tempat ini cocok untuk liburan keluarga dengan suasana yang aman nyaman dan menyenangkan",
-    "htm_weekday": 15000,
-    "htm_weekend": 20000,
+    "htm_weekday": "15000",
+    "htm_weekend": "20000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749368365/waterbyur-taman-air_iu4euu.jpg"
   },
   {
@@ -938,8 +938,8 @@
     "walk_dist_m": 34.58291274888769,
     "walk_time_min": 0.4322864093610962,
     "description": "museum ini menyajikan sejarah panjang tni angkatan darat melalui koleksi senjata kendaraan militer seragam dan dokumentasi perjuangan terletak di jantung kota yogyakarta museum ini menjadi sarana edukasi nasionalisme dan militer bagi pengunjung segala usia",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749368365/museum-TNI-AD_ncoouo.jpg"
   },
   {
@@ -961,8 +961,8 @@
     "walk_dist_m": 230.12778157886407,
     "walk_time_min": 2.876597269735801,
     "description": "museum edukatif yang menampilkan perkembangan sistem pendidikan di indonesia dari masa ke masa cocok untuk pelajar dan keluarga yang ingin mengetahui sejarah pendidikan nasional secara visual dan interaktif",
-    "htm_weekday": 2500,
-    "htm_weekend": 2500,
+    "htm_weekday": "2500",
+    "htm_weekend": "2500",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1748937503/Museum_Pendidikan_Indonesia_hmwoq6.jpg"
   },
   {
@@ -984,8 +984,8 @@
     "walk_dist_m": 298.77827543045066,
     "walk_time_min": 3.734728442880633,
     "description": "legawong adalah destinasi alam yang menawarkan konsep wisata outdoor dengan camping ground kebun dan area edukasi lingkungan cocok untuk kegiatan komunitas sekolah atau keluarga yang ingin menikmati wisata hijau",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1748938251/legawong_tuvr9g.jpg"
   },
   {
@@ -1007,8 +1007,8 @@
     "walk_dist_m": 31.533729497461234,
     "walk_time_min": 0.39417161871826545,
     "description": "museum edukatif milik universitas gadjah mada ini memiliki koleksi ribuan spesimen hewan tumbuhan dan fosil tempat ini sangat cocok untuk pelajar dan peneliti yang ingin belajar tentang keanekaragaman hayati indonesia",
-    "htm_weekday": 7000,
-    "htm_weekend": 7000,
+    "htm_weekday": "7000",
+    "htm_weekend": "7000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1748940118/Museum_of_Biology_UGM_bptatv.jpg"
   },
   {
@@ -1030,8 +1030,8 @@
     "walk_dist_m": 321.66805075472945,
     "walk_time_min": 4.020850634434118,
     "description": "kompleks bekas taman kerajaan kesultanan yogyakarta yang dulunya digunakan untuk tempat pemandian dan tempat meditasi para raja arsitekturnya unik dan sarat akan nilai sejarah",
-    "htm_weekday": 15000,
-    "htm_weekend": 15000,
+    "htm_weekday": "15000",
+    "htm_weekend": "15000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1748940119/Taman_sari_jogja_buvlfd.jpg"
   },
   {
@@ -1053,8 +1053,8 @@
     "walk_dist_m": 351.4022319332325,
     "walk_time_min": 4.392527899165406,
     "description": "salah satu ikon sejarah di yogyakarta berupa kompleks bangunan bekas tempat pemandian putri keraton dikenal karena lorong lorong bawah tanah dan bangunan artistik untuk spot foto",
-    "htm_weekday": 15000,
-    "htm_weekend": 15000,
+    "htm_weekday": "15000",
+    "htm_weekend": "15000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1748940119/Taman_sari_jogja_buvlfd.jpg"
   },
   {
@@ -1076,8 +1076,8 @@
     "walk_dist_m": 356.659346273923,
     "walk_time_min": 4.458241828424038,
     "description": "bukit kapur yang menawarkan wisata edukasi geologi tempat ini cocok untuk tracking ringan sambil belajar tentang formasi batuan karst di yogyakarta",
-    "htm_weekday": 10000,
-    "htm_weekend": 10000,
+    "htm_weekday": "10000",
+    "htm_weekend": "10000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1748940362/cagar-alam-gunung-gamping_hzr2a2.jpg"
   },
   {
@@ -1099,8 +1099,8 @@
     "walk_dist_m": 129.5817521161825,
     "walk_time_min": 1.6197719014522813,
     "description": "destinasi wisata kuliner dan edukatif yang menyajikan aneka camilan khas indonesia dalam konsep interaktif dan instagramable cocok untuk wisata keluarga dan anak anak",
-    "htm_weekday": 10000,
-    "htm_weekend": 10000,
+    "htm_weekday": "10000",
+    "htm_weekend": "10000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749094770/Snack_Wonderland_j9ewn7.jpg"
   },
   {
@@ -1122,8 +1122,8 @@
     "walk_dist_m": 519.0386315010369,
     "walk_time_min": 6.487982893762961,
     "description": "museum yang menyimpan peninggalan pribadi dan catatan sejarah dari sri sultan hb ix tokoh penting dalam kemerdekaan ri cocok untuk belajar sejarah nasional dari perspektif yogyakarta",
-    "htm_weekday": 10000,
-    "htm_weekend": 10000,
+    "htm_weekday": "10000",
+    "htm_weekend": "10000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749301275/Museum_Sri_Sultan_Hamengkubuwono_IX_yuygle.jpg"
   },
   {
@@ -1145,8 +1145,8 @@
     "walk_dist_m": 686.5725541595956,
     "walk_time_min": 8.582156926994944,
     "description": "museum perjuangan pangeran diponegoro yang menyimpan benda benda peninggalan beliau tempat ini menjadi simbol perlawanan terhadap penjajahan dan edukasi sejarah perjuangan bangsa",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749301276/puncakbucu_z3gj6b.jpg"
   },
   {
@@ -1168,8 +1168,8 @@
     "walk_dist_m": 604.3701595944495,
     "walk_time_min": 7.5546269949306195,
     "description": "desa wisata sukunan adalah salah satu pelopor desa wisata berbasis lingkungan di yogyakarta yang terletak di kecamatan gamping sleman desa ini dikenal karena komitmennya terhadap prinsip ekowisata pengelolaan sampah mandiri dan penerapan gaya hidup ramah lingkungan pengunjung dapat belajar tentang pengolahan limbah membuat kerajinan dari barang bekas serta menikmati suasana pedesaan yang asri dan edukatif cocok untuk wisata edukasi studi lingkungan dan inspirasi gaya hidup berkelanjutan",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749302573/Sukunan_Tourism_Village_cwcypn.jpg"
   },
   {
@@ -1190,9 +1190,9 @@
     "stop_lon": 110.489817,
     "walk_dist_m": 1071.6075175798953,
     "walk_time_min": 13.395093969748691,
-    "description": "candi budha yang terletak di kawasan prambanan bernama bubrah karena kondisinya dulu rusak kini menjadi spot sejarah dan arkeologi yang menarik",
-    "htm_weekday": 40000,
-    "htm_weekend": 40000,
+    "description": "candi budha yang terletak di kawasan prambanan bernama \u0093bubrah\u0094 karena kondisinya dulu rusak kini menjadi spot sejarah dan arkeologi yang menarik",
+    "htm_weekday": "40000",
+    "htm_weekend": "40000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749302785/Candi_Bubrah_ocn7dh.jpg"
   },
   {
@@ -1214,8 +1214,8 @@
     "walk_dist_m": 261.5637041030581,
     "walk_time_min": 3.2695463012882264,
     "description": "gerbang benteng tua peninggalan keraton yogyakarta sering dijadikan spot foto dan penanda akses menuju kawasan kuliner gudeg wijilan",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749302831/Plengkung_Wijilan_xn4jsi.jpg"
   },
   {
@@ -1237,8 +1237,8 @@
     "walk_dist_m": 402.00197367139504,
     "walk_time_min": 5.025024670892438,
     "description": "bagian dari gembira loka zoo yang menyajikan koleksi satwa diawetkan dan informasi edukatif seputar hewan langka serta upaya konservasi",
-    "htm_weekday": 60000,
-    "htm_weekend": 75000,
+    "htm_weekday": "60000",
+    "htm_weekend": "75000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749303191/Museum_Satwa_Gembira_Loka_Zoo_lnntu3.jpg"
   },
   {
@@ -1260,8 +1260,8 @@
     "walk_dist_m": 89.3116609522904,
     "walk_time_min": 1.11639576190363,
     "description": "taman dengan instalasi air mancur menari yang disinari lampu warna warni cocok untuk wisata malam keluarga dan anak anak",
-    "htm_weekday": 6000,
-    "htm_weekend": 6000,
+    "htm_weekday": "6000",
+    "htm_weekend": "6000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749303275/Taman_Air_Menari_uavupy.jpg"
   },
   {
@@ -1283,8 +1283,8 @@
     "walk_dist_m": 233.73612343867003,
     "walk_time_min": 2.9217015429833753,
     "description": "candi kecil yang ditemukan di area kampus uii merupakan candi hindu dengan struktur sederhana namun bernilai sejarah tinggi",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749303528/Candi_Kimpulan_l8zlpr.jpg"
   },
   {
@@ -1306,8 +1306,8 @@
     "walk_dist_m": 142.0904134058141,
     "walk_time_min": 1.7761301675726764,
     "description": "pameran seni kontemporer berskala internasional yang diadakan tahunan di yogyakarta tahun mengusung tema keberagaman dan inklusivitas",
-    "htm_weekday": 50000,
-    "htm_weekend": 50000,
+    "htm_weekday": "50000",
+    "htm_weekend": "50000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749303635/ARTJOG_MMXIX_cgls7c.jpg"
   },
   {
@@ -1329,8 +1329,8 @@
     "walk_dist_m": 86.86678014603726,
     "walk_time_min": 1.0858347518254656,
     "description": "candi kecil yang berada di dekat mata air suci menarik untuk dikunjungi karena menyatukan unsur arsitektur keagamaan dan alam",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749303821/Candi_Donotirto_i1zeoh.jpg"
   },
   {
@@ -1352,8 +1352,8 @@
     "walk_dist_m": 905.6942242672632,
     "walk_time_min": 11.32117780334079,
     "description": "candi budha yang terletak di kompleks prambanan memiliki struktur menyerupai lumbung padi dan menjadi bagian dari jejak akulturasi budaya hindu budha",
-    "htm_weekday": 40000,
-    "htm_weekend": 40000,
+    "htm_weekday": "40000",
+    "htm_weekend": "40000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749303883/Candi_Lumbung_skmmkr.jpg"
   },
   {
@@ -1375,8 +1375,8 @@
     "walk_dist_m": 459.50465505471345,
     "walk_time_min": 5.743808188183918,
     "description": "taman dan galeri seni yang didedikasikan untuk pelukis sekaligus tokoh pendidikan seni rupa tino sidin cocok untuk wisata seni keluarga",
-    "htm_weekday": 5000,
-    "htm_weekend": 10000,
+    "htm_weekday": "5000",
+    "htm_weekend": "10000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749304196/Taman_Tino_Sidin_iscw0t.jpg"
   },
   {
@@ -1398,8 +1398,8 @@
     "walk_dist_m": 26.692036949045725,
     "walk_time_min": 0.33365046186307157,
     "description": "bangunan stasiun tua yang kini tidak beroperasi namun menjadi titik historis transportasi dan jalur rel di wilayah bantul",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749304236/Stasiun_Kereta_Api_Bantul_osmtom.jpg"
   },
   {
@@ -1421,8 +1421,8 @@
     "walk_dist_m": 604.8174100911211,
     "walk_time_min": 7.560217626139014,
     "description": "kafe edukatif yang menggabungkan pengalaman ngopi dengan pelatihan bahasa diskusi budaya dan ruang komunitas kreatif",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749304456/Bahasa_Kopi_rgowpn.jpg"
   },
   {
@@ -1444,8 +1444,8 @@
     "walk_dist_m": 345.9457911694142,
     "walk_time_min": 4.324322389617677,
     "description": "lembaga seni kontemporer di yogyakarta yang aktif mengadakan pameran diskusi dan kolaborasi seni lintas disiplin dan budaya",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749304532/Cemeti_-_Institute_for_Art_and_Society_gzpnbb.jpg"
   },
   {
@@ -1467,8 +1467,8 @@
     "walk_dist_m": 193.43365989848294,
     "walk_time_min": 2.417920748731037,
     "description": "pangurakan gate adalah pintu gerbang bersejarah yang menjadi akses utama menuju kompleks keraton yogyakarta dari arah utara bangunan ini memiliki nilai arsitektural dan historis tinggi karena menjadi bagian dari sumbu filosofis yogyakarta yang menghubungkan gunung merapi keraton dan laut selatan lokasi ini sering dilewati dalam upacara tradisional keraton dan merupakan spot foto ikonik bagi wisatawan",
-    "htm_weekday": 15000,
-    "htm_weekend": 15000,
+    "htm_weekday": "15000",
+    "htm_weekend": "15000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749304802/Pangurakan_Gate_v8kebh.jpg"
   },
   {
@@ -1490,8 +1490,8 @@
     "walk_dist_m": 831.0227931215086,
     "walk_time_min": 10.387784914018857,
     "description": "wahana air keluarga dengan berbagai permainan dan kolam untuk anak hingga dewasa",
-    "htm_weekday": 20000,
-    "htm_weekend": 20000,
+    "htm_weekday": "20000",
+    "htm_weekend": "20000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749304965/Pakem_Sari_Water_Park_w0wafz.jpg"
   },
   {
@@ -1513,8 +1513,8 @@
     "walk_dist_m": 221.56373973087852,
     "walk_time_min": 2.7695467466359815,
     "description": "destinasi cave tubing populer menyusuri sungai bawah tanah dengan ban di tengah keindahan gua alami",
-    "htm_weekday": 2000,
-    "htm_weekend": 2000,
+    "htm_weekday": "2000",
+    "htm_weekend": "2000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749305059/Goa_Kalisuci_re3ocz.jpg"
   },
   {
@@ -1536,8 +1536,8 @@
     "walk_dist_m": 287.6293224442585,
     "walk_time_min": 3.595366530553231,
     "description": "kampung modern dengan digitalisasi berbasis warga pionir smart village di jogja",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749305371/Kampoeng_Cyber_Yogyakarta_iw8emn.jpg"
   },
   {
@@ -1559,8 +1559,8 @@
     "walk_dist_m": 595.6459223474786,
     "walk_time_min": 7.445574029343483,
     "description": "bangunan bersejarah yang dahulu menjadi bagian penting dalam struktur keraton yogyakarta",
-    "htm_weekday": 10000,
-    "htm_weekend": 10000,
+    "htm_weekday": "10000",
+    "htm_weekend": "10000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749305471/Bangsal_Magangan_hu6npv.jpg"
   },
   {
@@ -1582,8 +1582,8 @@
     "walk_dist_m": 403.58871604550785,
     "walk_time_min": 5.044858950568848,
     "description": "tugu bersejarah yang memperingati perjuangan masyarakat jetis di masa penjajahan",
-    "htm_weekday": 15000,
-    "htm_weekend": 15000,
+    "htm_weekday": "15000",
+    "htm_weekend": "15000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749305555/Jetis_Monument_n6suo8.jpg"
   },
   {
@@ -1605,8 +1605,8 @@
     "walk_dist_m": 431.3652289525697,
     "walk_time_min": 5.392065361907121,
     "description": "salah satu candi utama di kompleks prambanan megah dan penuh nilai spiritual hindu",
-    "htm_weekday": 25000,
-    "htm_weekend": 25000,
+    "htm_weekday": "25000",
+    "htm_weekend": "25000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749307332/Candi_Siwa_d71u5r.jpg"
   },
   {
@@ -1628,8 +1628,8 @@
     "walk_dist_m": 662.869240506371,
     "walk_time_min": 8.285865506329639,
     "description": "penanda waktu klasik di area kota yang menjadi ikon lokal dengan nilai sejarah unik",
-    "htm_weekday": 24000,
-    "htm_weekend": 24000,
+    "htm_weekday": "24000",
+    "htm_weekend": "24000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749307471/Tugu_Jam_ufcort.jpg"
   },
   {
@@ -1651,8 +1651,8 @@
     "walk_dist_m": 755.9770456923749,
     "walk_time_min": 9.449713071154687,
     "description": "desa religius yang terkenal dengan pondok pesantren cocok untuk wisata religi dan budaya",
-    "htm_weekday": 5000,
-    "htm_weekend": 5000,
+    "htm_weekday": "5000",
+    "htm_weekend": "5000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749307530/Tourism_Village_Mlangi_b3ceny.jpg"
   },
   {
@@ -1674,8 +1674,8 @@
     "walk_dist_m": 887.9098840841706,
     "walk_time_min": 11.098873551052133,
     "description": "spot foto di antara dua gapura klasik simbol transisi budaya dan waktu di yogyakarta",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749307593/Between_Two_Gates_mpuzki.jpg"
   },
   {
@@ -1697,8 +1697,8 @@
     "walk_dist_m": 289.41573720257827,
     "walk_time_min": 3.6176967150322286,
     "description": "unit lanjutan museum budaya jawa menyajikan koleksi keris batik dan artefak sejarah",
-    "htm_weekday": 10000,
-    "htm_weekend": 10000,
+    "htm_weekday": "10000",
+    "htm_weekend": "10000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749307668/Museum_Sonobudoyo_Unit_II_tcuh85.jpg"
   },
   {
@@ -1720,8 +1720,8 @@
     "walk_dist_m": 289.41573720257827,
     "walk_time_min": 3.6176967150322286,
     "description": "museum negara yang memamerkan kekayaan budaya dan sejarah jawa secara mendalam",
-    "htm_weekday": 10000,
-    "htm_weekend": 10000,
+    "htm_weekday": "10000",
+    "htm_weekend": "10000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749307668/Museum_Sonobudoyo_Unit_II_tcuh85.jpg"
   },
   {
@@ -1743,8 +1743,8 @@
     "walk_dist_m": 395.7130066059779,
     "walk_time_min": 4.946412582574724,
     "description": "candi di kompleks prambanan yang didedikasikan untuk dewa brahma arsitekturnya megah dan simetris",
-    "htm_weekday": 25000,
-    "htm_weekend": 25000,
+    "htm_weekday": "25000",
+    "htm_weekend": "25000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749307768/Brahma_Temple_kndvic.jpg"
   },
   {
@@ -1766,8 +1766,8 @@
     "walk_dist_m": 587.7291188951923,
     "walk_time_min": 7.346613986189904,
     "description": "ruang terbuka hijau untuk diskusi belajar atau bersantai di lingkungan kampus",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749308119/Gazebo_Fakultas_Pertanian_UGM_fcdhus.jpg"
   },
   {
@@ -1789,8 +1789,8 @@
     "walk_dist_m": 689.7046420002235,
     "walk_time_min": 8.621308025002794,
     "description": "destinasi wisata berbasis pertanian dan budaya di sleman dengan berbagai aktivitas edukatif",
-    "htm_weekday": 10000,
-    "htm_weekend": 10000,
+    "htm_weekday": "10000",
+    "htm_weekend": "10000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749308126/Dewi_Rawe_gvnimd.jpg"
   },
   {
@@ -1812,8 +1812,8 @@
     "walk_dist_m": 268.3301040166226,
     "walk_time_min": 3.3541263002077826,
     "description": "museum kedokteran mata pertama di indonesia menyimpan sejarah dunia oftalmologi",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749308617/Museum_Rs_Mata_Dr_Yap_c5hhjr.jpg"
   },
   {
@@ -1835,8 +1835,8 @@
     "walk_dist_m": 19.63242062812088,
     "walk_time_min": 0.245405257851511,
     "description": "pusat informasi resmi pariwisata yogyakarta lengkap dengan peta dan brosur wisata",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749308622/Government_Tourist_Information_Center_kpkbzu.jpg"
   },
   {
@@ -1858,8 +1858,8 @@
     "walk_dist_m": 237.34037831912434,
     "walk_time_min": 2.9667547289890543,
     "description": "museum edukatif yang menampilkan batuan mineral dan teknologi geologi",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749308627/Museum_Geoteknologi_Mineral_k3yu9u.jpg"
   },
   {
@@ -1881,8 +1881,8 @@
     "walk_dist_m": 377.0486122479738,
     "walk_time_min": 4.713107653099672,
     "description": "kantor pengelola resmi wisata candi pusat informasi dan tiket",
-    "htm_weekday": 50000,
-    "htm_weekend": 50000,
+    "htm_weekday": "50000",
+    "htm_weekend": "50000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749308632/Unit_Office_Taman_Wisata_Candi_Prambanan_njnmjh.jpg"
   },
   {
@@ -1904,8 +1904,8 @@
     "walk_dist_m": 514.7437615709978,
     "walk_time_min": 6.434297019637472,
     "description": "candi candi pendamping di kompleks prambanan yang berjumlah puluhan mencerminkan struktur kosmis hindu",
-    "htm_weekday": 50000,
-    "htm_weekend": 50000,
+    "htm_weekday": "50000",
+    "htm_weekend": "50000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749308638/Perwara_Temple_yucfii.jpg"
   },
   {
@@ -1927,8 +1927,8 @@
     "walk_dist_m": 815.0885457381698,
     "walk_time_min": 10.188606821727124,
     "description": "wisata jeep menyusuri jalur bekas letusan merapi dengan cerita sejarah dan edukasi geologi",
-    "htm_weekday": 350000,
-    "htm_weekend": 350000,
+    "htm_weekday": "350000",
+    "htm_weekend": "350000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749308901/Lava_Tour_Merapi_rlfq3f.jpg"
   },
   {
@@ -1950,8 +1950,8 @@
     "walk_dist_m": 326.67705174828666,
     "walk_time_min": 4.083463146853584,
     "description": "museum mainan pertama di indonesia terletak di bawah tangga gedung taman budaya yogyakarta menampilkan berbagai koleksi mainan dan alat peraga edukatif",
-    "htm_weekday": 5000,
-    "htm_weekend": 5000,
+    "htm_weekday": "5000",
+    "htm_weekend": "5000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749309177/Sekretariat_Sementara_Museum_Anak_Kolong_Tangga_ckojgo.jpg"
   },
   {
@@ -1973,8 +1973,8 @@
     "walk_dist_m": 248.80969762524256,
     "walk_time_min": 3.110121220315532,
     "description": "masjid yang berada di sleman mudah diakses dengan transportasi umum dan dekat dengan beberapa halte bus utama",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749309424/Mesjid_Ldii_Kelompok_Candi_lrrxdt.jpg"
   },
   {
@@ -1996,8 +1996,8 @@
     "walk_dist_m": 465.5222310205845,
     "walk_time_min": 5.819027887757306,
     "description": "jalur wisata alam di ngaglik sleman yang menawarkan pengalaman menyusuri sungai dan pemandangan sawah yang asri",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749309431/Brug_Londho_River_Track_pmrpd7.jpg"
   },
   {
@@ -2019,8 +2019,8 @@
     "walk_dist_m": 373.498054029684,
     "walk_time_min": 4.66872567537105,
     "description": "monumen obelisk abad muhammadiyah adalah tugu peringatan di kampus umy bantul yang dibangun untuk mengenang tahun kontribusi muhammadiyah di bidang pendidikan sosial dan dakwah monumen berbentuk obelisk ini juga menjadi landmark edukatif dan simbol keteguhan organisasi",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749309434/Monument_obelisk_1_Century_of_Muhammadiyah_b1lvmu.jpg"
   },
   {
@@ -2042,8 +2042,8 @@
     "walk_dist_m": 147.111116814714,
     "walk_time_min": 1.838888960183925,
     "description": "desa wisata di yogyakarta yang menampilkan kekayaan budaya lokal termasuk kerajinan batik dan tembikar serta suasana pedesaan yang asri",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749309746/Tourism_Village_Pandeyan_dv3mvx.jpg"
   },
   {
@@ -2065,8 +2065,8 @@
     "walk_dist_m": 905.010158490122,
     "walk_time_min": 11.312626981126524,
     "description": "penyedia layanan paket wisata di yogyakarta yang menawarkan berbagai destinasi menarik dengan harga terjangkau",
-    "htm_weekday": 350000,
-    "htm_weekend": 350000,
+    "htm_weekday": "350000",
+    "htm_weekend": "350000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749309773/JOGJA_TREVELING_b7tzsc.jpg"
   },
   {
@@ -2088,8 +2088,8 @@
     "walk_dist_m": 349.12418578011835,
     "walk_time_min": 4.36405232225148,
     "description": "desa wisata budaya di sekitar keraton yogyakarta yang menyajikan seni kuliner dan kehidupan tradisional masyarakat jawa secara autentik",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749309947/Tourism_Village_Duchy_ubz9u3.jpg"
   },
   {
@@ -2111,8 +2111,8 @@
     "walk_dist_m": 823.5981697237137,
     "walk_time_min": 10.29497712154642,
     "description": "kompleks candi yang menawarkan pemandangan arsitektur kuno dan suasana yang menenangkan",
-    "htm_weekday": 8000,
-    "htm_weekend": 8000,
+    "htm_weekday": "8000",
+    "htm_weekend": "8000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749310050/Taman_Wisata_Candi_Sojiwan_ry0trd.jpg"
   },
   {
@@ -2134,8 +2134,8 @@
     "walk_dist_m": 467.0661590164049,
     "walk_time_min": 5.838326987705061,
     "description": "salah satu candi di kompleks prambanan yang didedikasikan untuk dewa wisnu menampilkan arsitektur khas hindu",
-    "htm_weekday": 75000,
-    "htm_weekend": 75000,
+    "htm_weekday": "75000",
+    "htm_weekend": "75000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749310053/Candi_Wisnu_rpcrx8.jpg"
   },
   {
@@ -2157,13 +2157,13 @@
     "walk_dist_m": 60.2166404226106,
     "walk_time_min": 0.7527080052826325,
     "description": "kampung wisata yang menawarkan pengalaman budaya lokal termasuk seni kuliner dan kerajinan tangan",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471403/Kampung_Wisata_Sosromenduran_oxhjyt.jpg"
   },
   {
     "poi_id": 354,
-    "name": "Guide Francophone et Chauffeur de Voiture Privé de Voyage Yogyakarta Java Indonésie",
+    "name": "Guide Francophone et Chauffeur de Voiture Priv\u00e9 de Voyage Yogyakarta Java Indon\u00e9sie",
     "type": "Lainnya",
     "lat": -7.8206473,
     "lon": 110.3773068,
@@ -2180,8 +2180,8 @@
     "walk_dist_m": 135.59666160661456,
     "walk_time_min": 1.694958270082682,
     "description": "layanan pemandu wisata dan sopir pribadi berbahasa prancis yang menyediakan tur khusus di yogyakarta dan sekitarnya untuk wisatawan francophone",
-    "htm_weekday": 11500,
-    "htm_weekend": 11500,
+    "htm_weekday": "11500",
+    "htm_weekend": "11500",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471403/Guide_Francophone_et_Chauffeur_de_Voiture_Priv%C3%A9_de_Voyage_Yogyakarta_Java_Indon%C3%A9sie_qtip6v.jpg"
   },
   {
@@ -2203,8 +2203,8 @@
     "walk_dist_m": 374.8698439103961,
     "walk_time_min": 4.685873048879952,
     "description": "sebuah desa wisata yang menawarkan pengalaman budaya lokal termasuk kegiatan pertanian dan kerajinan tangan tradisional",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471402/Kampung_Wisata_Rejowinangun_pepi8g.jpg"
   },
   {
@@ -2226,8 +2226,8 @@
     "walk_dist_m": 314.6937449571382,
     "walk_time_min": 3.9336718119642278,
     "description": "arena lomba burung berkicau yang menjadi ajang kompetisi bagi pecinta burung",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471400/Gantangan_Lomba_Burung_New_POSJAKAL_kudwrf.jpg"
   },
   {
@@ -2249,8 +2249,8 @@
     "walk_dist_m": 44.59605053516287,
     "walk_time_min": 0.5574506316895358,
     "description": "sebuah gedung ikonik yang menjadi salah satu landmark kota menawarkan fasilitas ruang acara dan pusat pertemuan",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749472000/Gedung_Jefferson_bidbzq.jpg"
   },
   {
@@ -2272,8 +2272,8 @@
     "walk_dist_m": 185.21960729488714,
     "walk_time_min": 2.3152450911860893,
     "description": "galeri seni yang memamerkan karya seni kontemporer memberikan wawasan mendalam mengenai seni lokal",
-    "htm_weekday": 75000,
-    "htm_weekend": 75000,
+    "htm_weekday": "75000",
+    "htm_weekend": "75000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749472001/Gallery_Amri_Yahya_yhjbvi.jpg"
   },
   {
@@ -2286,7 +2286,7 @@
     "vote_count": 20,
     "open_hhmm": "08:00",
     "close_hhmm": "16:00",
-    "open_days": "Selasa–Minggu",
+    "open_days": "Selasa\u2013Minggu",
     "needs_review": 0,
     "nearest_stop_id": "HT_163",
     "nearest_stop_name": "Purawisata - A",
@@ -2295,8 +2295,8 @@
     "walk_dist_m": 519.227968962649,
     "walk_time_min": 6.490349612033112,
     "description": "di museum batik keraton yogyakarta wisatawan akan disuguhi sekitar an motif asli keluarga kerajaan tak seperti ruangan museum lain di komplek keraton khusus di museum batik pengunjung dilarang memotret terdapat foto foto raja dan ratu dari generasi ke generasi lengkap dengan penjelasan filosofinya",
-    "htm_weekday": 20000,
-    "htm_weekend": 20000,
+    "htm_weekday": "20000",
+    "htm_weekend": "20000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471988/Museum_Batik_Keraton_Yogyakarta_aoc6wq.jpg"
   },
   {
@@ -2318,8 +2318,8 @@
     "walk_dist_m": 38.053880578681444,
     "walk_time_min": 0.47567350723351803,
     "description": "tempat hiburan anak dalam pusat perbelanjaan menyediakan wahana edukatif dan permainan seru",
-    "htm_weekday": 70000,
-    "htm_weekend": 70000,
+    "htm_weekday": "70000",
+    "htm_weekend": "70000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471968/Kids_Fun_Mirota_Pasaraya_i6sjoc.jpg"
   },
   {
@@ -2341,8 +2341,8 @@
     "walk_dist_m": 80.3984978835942,
     "walk_time_min": 1.0049812235449276,
     "description": "museum yang mengenang karya dan pemikiran romo mangun arsitek dan tokoh pendidikan indonesia",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471968/Museum_Romo_Mangun_tde27o.jpg"
   },
   {
@@ -2364,8 +2364,8 @@
     "walk_dist_m": 556.2267581446479,
     "walk_time_min": 6.952834476808098,
     "description": "layanan wisata santai dengan berbagai paket menarik cocok untuk liburan fleksibel di jogja",
-    "htm_weekday": 5000,
-    "htm_weekend": 5000,
+    "htm_weekday": "5000",
+    "htm_weekend": "5000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471967/TemenNyantai_TransWisata_e7l8ve.jpg"
   },
   {
@@ -2387,8 +2387,8 @@
     "walk_dist_m": 102.32514662803223,
     "walk_time_min": 1.2790643328504028,
     "description": "museum yang menampilkan kontribusi perempuan indonesia dalam sejarah perjuangan bangsa",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471967/Museum_Pergerakan_Wanita_Indonesia_Mandala_Bhakti_Wanitatama_wlyhje.jpg"
   },
   {
@@ -2410,8 +2410,8 @@
     "walk_dist_m": 769.7258565991551,
     "walk_time_min": 9.621573207489439,
     "description": "gerbang agung penuh nilai sejarah yang menjadi pintu masuk kompleks masjid mataram di kotagede",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471813/Kori_Agung_Masjid_Gedhe_Mataram_Kotagede_pjvhxm.jpg"
   },
   {
@@ -2433,8 +2433,8 @@
     "walk_dist_m": 645.2969560367865,
     "walk_time_min": 8.06621195045983,
     "description": "museum seni dan pribadi yang menampilkan karya serta sejarah hidup pelukis sidik martowidjojo",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471794/Museum_Sidik_Martowidjojo_ymey3t.jpg"
   },
   {
@@ -2456,8 +2456,8 @@
     "walk_dist_m": 249.25137360370258,
     "walk_time_min": 3.115642170046282,
     "description": "tur malam menjelajahi sejarah dan kuliner jogja dengan pengalaman jalan kaki yang unik",
-    "htm_weekday": 5000,
-    "htm_weekend": 5000,
+    "htm_weekday": "5000",
+    "htm_weekend": "5000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471793/Yogyakarta_Night_Tours_-_Meeting_Point_Klasik_Historical_Walking_and_Food_Tour_tiyus9.jpg"
   },
   {
@@ -2479,8 +2479,8 @@
     "walk_dist_m": 129.33761604912206,
     "walk_time_min": 1.6167202006140258,
     "description": "paket wisata menjelajahi dua candi ikonik indonesia dengan panduan berpengalaman",
-    "htm_weekday": 300000,
-    "htm_weekend": 300000,
+    "htm_weekday": "300000",
+    "htm_weekend": "300000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471793/Borobudur_Prambanan_Tour_ztnkof.jpg"
   },
   {
@@ -2502,8 +2502,8 @@
     "walk_dist_m": 988.6469264072276,
     "walk_time_min": 12.358086580090346,
     "description": "wisata edukatif berbasis alam dan pelestarian lingkungan dengan suasana pedesaan yang asri",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471793/Ekowisata_Nologaten_kxtd1v.jpg"
   },
   {
@@ -2525,8 +2525,8 @@
     "walk_dist_m": 221.56373973087852,
     "walk_time_min": 2.7695467466359815,
     "description": "desa di kawasan pegunungan dengan kepala keluarga menyuguhkan kehidupan sederhana dan budaya khas lokal",
-    "htm_weekday": 15000,
-    "htm_weekend": 15000,
+    "htm_weekday": "15000",
+    "htm_weekend": "15000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471793/Kampung_Pitu_msvttv.jpg"
   },
   {
@@ -2548,8 +2548,8 @@
     "walk_dist_m": 459.3549346848593,
     "walk_time_min": 5.741936683560741,
     "description": "situs candi kecil yang menyimpan sejarah masa lalu dan menjadi objek wisata sejarah yang menarik",
-    "htm_weekday": 30000,
-    "htm_weekend": 30000,
+    "htm_weekday": "30000",
+    "htm_weekend": "30000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471787/Candi_Kelir_qry5qr.jpg"
   },
   {
@@ -2571,8 +2571,8 @@
     "walk_dist_m": 378.19942652993973,
     "walk_time_min": 4.727492831624247,
     "description": "desa wisata yang menggabungkan nuansa pedesaan pertanian dan aktivitas budaya lokal",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471788/Desa_Wisata_Bedog_Ilir_ogwtjg.jpg"
   },
   {
@@ -2594,8 +2594,8 @@
     "walk_dist_m": 120.48558800137393,
     "walk_time_min": 1.506069850017174,
     "description": "monumen yang menjadi simbol perjuangan wanita indonesia dilengkapi museum yang informatif",
-    "htm_weekday": 50000,
-    "htm_weekend": 50000,
+    "htm_weekday": "50000",
+    "htm_weekend": "50000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471786/Museum_Monumen_Kowani_khx9gb.jpg"
   },
   {
@@ -2617,8 +2617,8 @@
     "walk_dist_m": 70.94042555600736,
     "walk_time_min": 0.8867553194500919,
     "description": "jembatan bersejarah dengan arsitektur klasik yang menjadi saksi bisu perjalanan kota",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471786/Bangunan_Jembatan_Merah_hplw7c.jpg"
   },
   {
@@ -2640,8 +2640,8 @@
     "walk_dist_m": 93.2933227356777,
     "walk_time_min": 1.1661665341959713,
     "description": "kawasan bersejarah dengan nilai budaya tinggi dan arsitektur klasik kerajaan",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471747/Kauman_Pakualaman_Yogyakarta_rjz4cb.jpg"
   },
   {
@@ -2663,8 +2663,8 @@
     "walk_dist_m": 628.3890949587948,
     "walk_time_min": 7.854863686984935,
     "description": "layanan wisata lengkap dengan dokumentasi profesional untuk perjalanan di jogja",
-    "htm_weekday": 5000,
-    "htm_weekend": 5000,
+    "htm_weekday": "5000",
+    "htm_weekend": "5000",
     "image": "httphttps://res.cloudinary.com/dfciqrwpe/image/upload/v1749471736/TripJogja_-_Fotografer_-_Videografer_-_Edit_Foto_-_Paket_Wisata_avgglj.jpg"
   },
   {
@@ -2686,8 +2686,8 @@
     "walk_dist_m": 725.684002424693,
     "walk_time_min": 9.071050030308662,
     "description": "pintu masuk bagian barat dari kompleks masjid bersejarah dengan gaya arsitektur klasik mataram",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471713/Kori_Barat_Masjid_Gedhe_Mataram_Kotagede_ggpti2.jpg"
   },
   {
@@ -2709,8 +2709,8 @@
     "walk_dist_m": 915.7910987119207,
     "walk_time_min": 11.447388733899007,
     "description": "museum yang menampilkan koleksi beragam tentang garuda lambang negara indonesia serta artefak budaya lainnya",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471708/MUSEUM_GARUDA_fyepco.jpg"
   },
   {
@@ -2732,8 +2732,8 @@
     "walk_dist_m": 750.7391499667119,
     "walk_time_min": 9.384239374583899,
     "description": "menampilkan sejarah dan kontribusi organisasi muhammadiyah dalam bidang pendidikan sosial dan keagamaan di indonesia",
-    "htm_weekday": 30000,
-    "htm_weekend": 30000,
+    "htm_weekday": "30000",
+    "htm_weekend": "30000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471707/Museum_Muhamadiyah_agpkhg.jpg"
   },
   {
@@ -2755,8 +2755,8 @@
     "walk_dist_m": 188.29573629586466,
     "walk_time_min": 2.3536967036983083,
     "description": "bangunan tradisional jawa yang digunakan untuk berbagai acara budaya dan komunitas",
-    "htm_weekday": 20000,
-    "htm_weekend": 20000,
+    "htm_weekday": "20000",
+    "htm_weekend": "20000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471706/Pendopo_Pilahan_ju7d6h.jpg"
   },
   {
@@ -2778,8 +2778,8 @@
     "walk_dist_m": 329.7950877000266,
     "walk_time_min": 4.1224385962503325,
     "description": "paket wisata yang menawarkan perjalanan dari pelabuhan semarang ke candi borobudur termasuk transportasi dan pemandu",
-    "htm_weekday": 1380000,
-    "htm_weekend": 1380000,
+    "htm_weekday": "1380000",
+    "htm_weekend": "1380000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471706/Borobudur_Tour_From_Semarang_Port_trwpim.jpg"
   },
   {
@@ -2801,8 +2801,8 @@
     "walk_dist_m": 280.1921340819219,
     "walk_time_min": 3.5024016760240237,
     "description": "spot wisata edukatif dan spiritual yang menghadirkan suasana sejarah peradaban jawa kuno cocok untuk pecinta arkeologi dan budaya",
-    "htm_weekday": 25000,
-    "htm_weekend": 25000,
+    "htm_weekday": "25000",
+    "htm_weekend": "25000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471683/Candi_Card_c6snpt.jpg"
   },
   {
@@ -2824,8 +2824,8 @@
     "walk_dist_m": 614.1385265464185,
     "walk_time_min": 7.67673158183023,
     "description": "tempat hiburan dan rekreasi yang menyediakan berbagai fasilitas untuk keluarga dan anak anak",
-    "htm_weekday": 20000,
-    "htm_weekend": 20000,
+    "htm_weekday": "20000",
+    "htm_weekend": "20000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471675/Graceland_66_yyexj8.jpg"
   },
   {
@@ -2847,8 +2847,8 @@
     "walk_dist_m": 818.9133053370181,
     "walk_time_min": 10.236416316712726,
     "description": "area terbuka yang digunakan untuk kegiatan olahraga dan rekreasi masyarakat setempat",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471674/Mushola_Kawasan_Wisata_Candi_Prambanan_jjxihq.jpg"
   },
   {
@@ -2870,8 +2870,8 @@
     "walk_dist_m": 683.4253867626538,
     "walk_time_min": 8.542817334533172,
     "description": "wahana sepeda terbang yang memberikan sensasi melayang di udara cocok untuk anak anak dan keluarga",
-    "htm_weekday": 10000,
-    "htm_weekend": 10000,
+    "htm_weekday": "10000",
+    "htm_weekend": "10000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471674/Sepeda_Mabur_Sindu_Kusuma_Edupark_lop84k.jpg"
   },
   {
@@ -2893,8 +2893,8 @@
     "walk_dist_m": 593.3706643036821,
     "walk_time_min": 7.417133303796026,
     "description": "bangunan megah di keraton yogyakarta yang digunakan untuk upacara resmi menampilkan arsitektur jawa klasik dan ornamen bersejarah",
-    "htm_weekday": 15000,
-    "htm_weekend": 15000,
+    "htm_weekday": "15000",
+    "htm_weekend": "15000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471674/Bangsal_Kencana_j7hrgp.jpg"
   },
   {
@@ -2916,8 +2916,8 @@
     "walk_dist_m": 423.20714413164677,
     "walk_time_min": 5.290089301645585,
     "description": "jalur wisata yang mengajak pengunjung menyusuri peninggalan sejarah kotagede termasuk makam raja rumah tradisional dan industri perak",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471670/Kotagede_Heritage_Trail_pp5xgx.jpg"
   },
   {
@@ -2939,8 +2939,8 @@
     "walk_dist_m": 234.2629664405715,
     "walk_time_min": 2.9282870805071437,
     "description": "museum yang menampilkan pameran sementara tentang budaya dan sejarah jawa melengkapi koleksi utama museum sonobudoyo",
-    "htm_weekday": 10000,
-    "htm_weekend": 10000,
+    "htm_weekday": "10000",
+    "htm_weekend": "10000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471669/Museum_Temporer_Sonobudoyo_tfe1h5.jpg"
   },
   {
@@ -2962,8 +2962,8 @@
     "walk_dist_m": 941.5444522181324,
     "walk_time_min": 11.769305652726654,
     "description": "layanan tur yang menawarkan paket perjalanan wisata di yogyakarta dan sekitarnya",
-    "htm_weekday": 5000,
-    "htm_weekend": 5000,
+    "htm_weekday": "5000",
+    "htm_weekend": "5000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471667/Raharjo_Tour_m59ih0.jpg"
   },
   {
@@ -2985,8 +2985,8 @@
     "walk_dist_m": 619.487826839825,
     "walk_time_min": 7.743597835497812,
     "description": "kebun edukatif milik fakultas pertanian ugm yang digunakan untuk pembelajaran dan wisata agro",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471665/Vegetalika_Faperta_UGM_rufiac.jpg"
   },
   {
@@ -3008,8 +3008,8 @@
     "walk_dist_m": 994.155270475096,
     "walk_time_min": 12.4269408809387,
     "description": "candi buddha dari abad ke dengan arsitektur elegan cocok untuk wisata budaya dan fotografi sejarah",
-    "htm_weekday": 5000,
-    "htm_weekend": 5000,
+    "htm_weekday": "5000",
+    "htm_weekend": "5000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471661/WISATA_CANDI_SARI_fmz5nm.jpg"
   },
   {
@@ -3031,8 +3031,8 @@
     "walk_dist_m": 328.32860329817026,
     "walk_time_min": 4.104107541227128,
     "description": "layanan perencanaan tour dan transportasi privat di yogyakarta menyediakan paket city tour antar jemput bandara hingga trip luar kota",
-    "htm_weekday": 5000,
-    "htm_weekend": 5000,
+    "htm_weekday": "5000",
+    "htm_weekend": "5000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471660/Aisha_tour_planner_transport_service_yn39fo.jpg"
   },
   {
@@ -3054,8 +3054,8 @@
     "walk_dist_m": 347.6132670543476,
     "walk_time_min": 4.345165838179345,
     "description": "waduk kecil yang digunakan untuk irigasi dan rekreasi dikelilingi oleh pemandangan alam yang asri",
-    "htm_weekday": 10000,
-    "htm_weekend": 10000,
+    "htm_weekday": "10000",
+    "htm_weekend": "10000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471660/Embung_Bangeran_sgkyyn.jpg"
   },
   {
@@ -3077,8 +3077,8 @@
     "walk_dist_m": 294.64956694164795,
     "walk_time_min": 3.6831195867705993,
     "description": "studio tato yang menawarkan layanan seni tato dengan berbagai desain dan gaya",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471653/JOLLY_ROGER_TATTOO_bfidek.jpg"
   },
   {
@@ -3100,8 +3100,8 @@
     "walk_dist_m": 580.5316619968489,
     "walk_time_min": 7.256645774960612,
     "description": "gerbang hijau yang menjadi ikon dan pintu masuk ke kawasan wisata tertentu menambah daya tarik visual",
-    "htm_weekday": 10000,
-    "htm_weekend": 10000,
+    "htm_weekday": "10000",
+    "htm_weekend": "10000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471652/Lawang_Ijo_aiiv3a.jpg"
   },
   {
@@ -3123,8 +3123,8 @@
     "walk_dist_m": 97.30938538446483,
     "walk_time_min": 1.2163673173058105,
     "description": "monumen yang memperingati peristiwa serangan umum maret penting dalam sejarah perjuangan kemerdekaan indonesia",
-    "htm_weekday": 3000,
-    "htm_weekend": 3000,
+    "htm_weekday": "3000",
+    "htm_weekend": "3000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471652/Monumen_Serang_Umum_1_Maret_fndrtp.jpg"
   },
   {
@@ -3146,8 +3146,8 @@
     "walk_dist_m": 172.4600288729291,
     "walk_time_min": 2.1557503609116138,
     "description": "museum yang menampilkan koleksi mainan dan alat pendidikan dari berbagai era memberikan nostalgia dan edukasi",
-    "htm_weekday": 10000,
-    "htm_weekend": 15000,
+    "htm_weekday": "10000",
+    "htm_weekend": "15000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471653/Museum_Pendidikan_dan_Mainan_Kolong_Tangga_ewd58p.jpg"
   },
   {
@@ -3169,8 +3169,8 @@
     "walk_dist_m": 351.7986566019914,
     "walk_time_min": 4.397483207524893,
     "description": "tempat pemandian tradisional yang digunakan untuk relaksasi dan kegiatan sosial masyarakat",
-    "htm_weekday": 10000,
-    "htm_weekend": 10000,
+    "htm_weekday": "10000",
+    "htm_weekend": "10000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471647/Sasana_Tirta_Kembaran_qyaf8s.jpg"
   },
   {
@@ -3192,8 +3192,8 @@
     "walk_dist_m": 38.03754362272986,
     "walk_time_min": 0.4754692952841232,
     "description": "jam lonceng yang menjadi peninggalan sejarah kolonial menandai waktu dan peristiwa penting",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471646/Sokkel_klok_voor_Eeuw_Nederlandsch-Indische_pbyrka.jpg"
   },
   {
@@ -3215,8 +3215,8 @@
     "walk_dist_m": 581.709384963101,
     "walk_time_min": 7.2713673120387625,
     "description": "museum pribadi yang menampilkan koleksi seni dan budaya memberikan wawasan tentang kreativitas lokal",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471641/Andi_Bayou_Museum_knkwym.jpg"
   },
   {
@@ -3238,8 +3238,8 @@
     "walk_dist_m": 854.1597418677067,
     "walk_time_min": 10.676996773346334,
     "description": "ruang seni dan museum yang menampilkan karya seni kontemporer dan eksperimen kreatif",
-    "htm_weekday": 10000,
-    "htm_weekend": 10000,
+    "htm_weekday": "10000",
+    "htm_weekend": "10000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471641/BACKSPACE_Art_Lab_and_Museum_bagzpp.jpg"
   },
   {
@@ -3261,8 +3261,8 @@
     "walk_dist_m": 456.47250585346256,
     "walk_time_min": 5.705906323168282,
     "description": "bangunan tradisional yang digunakan dalam upacara adat dan kegiatan budaya di lingkungan keraton",
-    "htm_weekday": 15000,
-    "htm_weekend": 15000,
+    "htm_weekday": "15000",
+    "htm_weekend": "15000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471640/Bangsal_Pengapit_Pasewakan_r7ec7u.jpg"
   },
   {
@@ -3284,13 +3284,13 @@
     "walk_dist_m": 247.37619855971866,
     "walk_time_min": 3.092202481996483,
     "description": "layanan tur yang menyediakan paket wisata lengkap di yogyakarta dan sekitarnya",
-    "htm_weekday": 370000,
-    "htm_weekend": 370000,
+    "htm_weekday": "370000",
+    "htm_weekend": "370000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471640/Bintang_Pradana_Jogja_Tour_hekejm.jpg"
   },
   {
     "poi_id": 100,
-    "name": "Castelo de Água do Sultanato de Yogyakarta",
+    "name": "Castelo de \u00c1gua do Sultanato de Yogyakarta",
     "type": "Lainnya",
     "lat": -7.8100995,
     "lon": 110.3596395,
@@ -3307,8 +3307,8 @@
     "walk_dist_m": 401.11409970164686,
     "walk_time_min": 5.013926246270586,
     "description": "bangunan bergaya kastil yang digunakan sebagai tempat penyimpanan air pada masa kesultanan yogyakarta",
-    "htm_weekday": 30000,
-    "htm_weekend": 40000,
+    "htm_weekday": "30000",
+    "htm_weekend": "40000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471613/Castelo_de_%C3%81gua_do_Sultanato_de_Yogyakarta_qfzcyq.jpg"
   },
   {
@@ -3330,8 +3330,8 @@
     "walk_dist_m": 310.4567928128237,
     "walk_time_min": 3.8807099101602964,
     "description": "gerbang ikonik di kawasan wijilan terkenal sebagai sentra gudeg dan kuliner tradisional khas yogyakarta",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471605/Gapura_Sawojajar_Wijilan_vst1i9.jpg"
   },
   {
@@ -3353,8 +3353,8 @@
     "walk_dist_m": 207.3547434236293,
     "walk_time_min": 2.591934292795366,
     "description": "penyedia jasa tour pribadi dan dokumentasi profesional untuk wisatawan yang ingin menjelajahi jogja secara eksklusif",
-    "htm_weekday": 5000,
-    "htm_weekend": 5000,
+    "htm_weekday": "5000",
+    "htm_weekend": "5000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471604/Jasa_Citytour_-_Private_Trip_-_Tour_-_Fotografi_-_Antar_Bandara_Jogja_u2aztj.jpg"
   },
   {
@@ -3376,8 +3376,8 @@
     "walk_dist_m": 462.69632874421563,
     "walk_time_min": 5.783704109302695,
     "description": "masjid yang terletak di sekitar kawasan candi melayani kebutuhan spiritual masyarakat dan wisatawan",
-    "htm_weekday": 0,
-    "htm_weekend": 0,
+    "htm_weekday": "0",
+    "htm_weekend": "0",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471595/Masjid_Al-Huda_Candi_3_vf4cvj.jpg"
   },
   {
@@ -3399,8 +3399,8 @@
     "walk_dist_m": 516.3540743855202,
     "walk_time_min": 6.454425929819003,
     "description": "menampilkan koleksi kristal dan cinderamata dari keraton tempat edukatif mengenai budaya dan sejarah bangsawan jawa",
-    "htm_weekday": 15000,
-    "htm_weekend": 15000,
+    "htm_weekday": "15000",
+    "htm_weekend": "15000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471595/Museum_Kristal_dan_Cinderamata_Keraton_Yogyakarta_zrfb9n.jpg"
   },
   {
@@ -3422,8 +3422,8 @@
     "walk_dist_m": 150.05794210287348,
     "walk_time_min": 1.8757242762859185,
     "description": "museum sejarah perjuangan kemerdekaan indonesia menampilkan diorama dan koleksi senjata serta dokumen penting",
-    "htm_weekday": 5000,
-    "htm_weekend": 5000,
+    "htm_weekday": "5000",
+    "htm_weekend": "5000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471594/Museum_of_Struggle_qvnxdk.jpg"
   },
   {
@@ -3445,8 +3445,8 @@
     "walk_dist_m": 289.0496369181698,
     "walk_time_min": 3.6131204614771226,
     "description": "museum rumah tradisional jawa dengan koleksi benda antik dan suasana klasik yang cocok untuk wisata budaya",
-    "htm_weekday": 5000,
-    "htm_weekend": 7500,
+    "htm_weekday": "5000",
+    "htm_weekend": "7500",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471594/Museum_Omah_Jayeng_y6f1jy.jpg"
   },
   {
@@ -3468,8 +3468,8 @@
     "walk_dist_m": 150.96315037631615,
     "walk_time_min": 1.887039379703952,
     "description": "situs sejarah berupa ruangan tempat jenderal soedirman dirawat menyimpan nilai nilai perjuangan kemerdekaan",
-    "htm_weekday": 4000,
-    "htm_weekend": 4000,
+    "htm_weekday": "4000",
+    "htm_weekend": "4000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471412/Ruang_Perawatan_Jenderal_Soedirman_pzjids.jpg"
   },
   {
@@ -3491,8 +3491,8 @@
     "walk_dist_m": 175.55390636275996,
     "walk_time_min": 2.1944238295344993,
     "description": "situs arkeologi yang menyimpan tinggalan sejarah klasik jawa menarik untuk wisata sejarah dan penelitian budaya",
-    "htm_weekday": 15000,
-    "htm_weekend": 15000,
+    "htm_weekday": "15000",
+    "htm_weekend": "15000",
     "image": "https://res.cloudinary.com/dfciqrwpe/image/upload/v1749471403/Situs_Gedong_Pusoko_crl8jo.jpg"
   }
 ]
