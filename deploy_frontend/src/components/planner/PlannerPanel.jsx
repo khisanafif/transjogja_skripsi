@@ -42,7 +42,8 @@ function SearchableSelect({ options, value, onChange, placeholder }) {
             <div 
               key={o.value}
               className="px-3 py-2 text-sm cursor-pointer hover:bg-brand-50"
-              onClick={() => {
+              onMouseDown={(e) => {
+                e.preventDefault()
                 setQuery(o.label)
                 onChange(o.value)
                 setOpen(false)
